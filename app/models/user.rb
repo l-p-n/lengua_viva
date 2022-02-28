@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :reviews, :comments, :likes, :views, :bookmarks
 
   validates :first_name, :last_name, presence: true
+  validates :age, numericality: { only_integer: true }
 end
