@@ -4,7 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :reviews, :comments, :likes, :views, :bookmarks
+  has_many :reviews
+  has_many :comments
+  has_many :likes
+  has_many :views
+  has_many :bookmarks
 
   validates :first_name, :last_name, presence: true
   validates :age, numericality: { only_integer: true }
