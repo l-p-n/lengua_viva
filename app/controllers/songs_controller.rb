@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :findSong
+  before_action :find_song
 
   def show
 
@@ -7,7 +7,7 @@ class SongsController < ApplicationController
 
   private
 
-  def findSong
+  def find_song
     @song = Song.find(params[:id])
   end
 end
