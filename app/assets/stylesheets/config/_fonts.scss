@@ -1,9 +1,14 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Raleway:wght@100;300;500&display=swap');
+
+
+@import "colors";
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "Merriweather", "Open Sans";
+$headers-font: "Raleway", "Open Sans";
+
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -14,3 +19,20 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+h1 {
+  font-size: 64px !important;
+}
+
+h2 {
+  font-size: 48px !important;
+  color: $pink;
+}
+
+h3 {
+  font-size: 36px !important;
+}
+
+h1, h4, h5, h3 {
+  color: $blue
+}
