@@ -1,0 +1,9 @@
+  <%= simple_form_for [resource, @comment], class: "inline" do |f| %>
+    <div class="d-flex justify-content-start">
+      <%= f.input :content, label: false, required: false, class: "comment-text-input", placeholder: "Leave a comment..." %>
+      <%= button_tag :submit, class: "btn btn-primary comment-button" do %>
+        <i class="fa-solid fa-paper-plane"></i>
+      <% end %>
+
+    </div>
+  <% end %>
