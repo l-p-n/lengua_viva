@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create]
     resources :comments, only: [:create]
   end
+
   resources :likes, only: :destroy
   resources :bookmarks, only: :destroy
   resources :reviews, only: :destroy
