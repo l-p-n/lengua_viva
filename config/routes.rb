@@ -4,17 +4,20 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :users, only: :show
+  resources :videos, only: :show
+  resources :songs, only: :show
+  resources :podcasts, only: :show
 
-  resources :resources, only: [:show, :index, :new, :create] do
-    resources :likes, only: [:create, :destroy]
-    resources :bookmarks, only: [:create, :destroy]
+  resources :resources, only: [:index, :new, :create] do
+    resources :likes, only: [:create]
+    resources :bookmarks, only: [:create]
     resources :views, only: :create
-    resources :reviews, only: [:create, :destroy, :show]
-    resources :comments, only: [:create, :destroy]
+    resources :reviews, only: [:create]
+    resources :comments, only: [:create]
   end
-
-  resources :songs, only: [:show]
-
-  resources :podcasts, only: [:show]
+  resources :likes, only: :destroy
+  resources :bookmarks, only: :destroy
+  resources :reviews, only: :destroy
+  resources :comments, only: :destroy
 
 end
