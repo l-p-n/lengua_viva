@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :videos, only: :show
   resources :songs, only: :show
   resources :podcasts, only: :show
+  resources :articles, only: :show
 
   resources :resources, only: [:index, :new, :create] do
     resources :likes, only: [:create]
@@ -19,5 +20,4 @@ Rails.application.routes.draw do
   resources :bookmarks, only: :destroy
   resources :reviews, only: :destroy
   resources :comments, only: :destroy
-
 end
