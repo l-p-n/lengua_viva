@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   resources :songs, only: [:show]
 
+  resources :podcasts, only: [:show]
+
 end
