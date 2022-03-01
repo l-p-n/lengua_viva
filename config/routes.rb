@@ -6,12 +6,16 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :videos, only: :show
 
-  resources :resources, only: [:show, :index, :new, :create] do
-    resources :likes, only: [:create, :destroy]
-    resources :bookmarks, only: [:create, :destroy]
+  resources :resources, only: [:index, :new, :create] do
+    resources :likes, only: [:create]
+    resources :bookmarks, only: [:create]
     resources :views, only: :create
-    resources :reviews, only: [:create, :destroy, :show]
-    resources :comments, only: [:create, :destroy]
+    resources :reviews, only: [:create]
+    resources :comments, only: [:create]
   end
 
+  resources :likes, only: :destroy
+  resources :bookmarks, only: :destroy
+  resources :reviews, only: :destroy
+  resources :comments, only: :destroy
 end
