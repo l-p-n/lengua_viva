@@ -1,1 +1,33 @@
 <h1>Hello world</h1>
+<div class="container">
+  <div class="card-container">
+    <% @resources.each do |resource| %>
+
+    <div class="resource-card">
+
+        <div class="card-image">
+        </div>
+
+        <div class="card-info">
+          <div class="resource-details">
+          <h5><%= resource.title %></h5>
+          <p><%= resource.author %></p>
+          </div>
+          <div class="resource-format">
+          <p> <%= resource.type %></p>
+          </div>
+        </div>
+
+        <div class="card-info">
+          <div class="resource-tags">
+            <p>Cooking</p>
+          </div>
+          <div class="resource-likes">
+            <i class="fa-solid fa-thumbs-up"></i>
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>

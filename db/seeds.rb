@@ -9,7 +9,7 @@
 require 'faker'
 
 10.times do
-  User.create(email: Faker::Internet.email, password: Faker::Internet.password, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: (26..55).to_a.sample)
+  User.create(email: Faker::Internet.email, password: "secret", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: (26..55).to_a.sample)
 end
 
 puts "Creating videos"
@@ -56,7 +56,7 @@ Video.create(source: "Youtube",
 puts "Creating songs"
 
 Song.create(source: "Spotify",
-  url: "https://open.spotify.com/track/0lEaqq59YmCxJNB6cb209Y?si=eeda5aa0dedb419f",
+  url: "https://open.spotify.com/embed/track/0lEaqq59YmCxJNB6cb209Y",
   author: "ROSALÍA",
   title: "Si Tú Súperias Compañero",
   length: 364,
@@ -64,7 +64,7 @@ Song.create(source: "Spotify",
 )
 
 Song.create(source: "Spotify",
-url: "https://open.spotify.com/track/4r7iDEGdW2Gw9hJlCbi5qL?si=01a88c1ba83942b0",
+url: "https://open.spotify.com/embed/track/4r7iDEGdW2Gw9hJlCbi5qL",
 author: "Devendra Banhart",
 title: "Mi Negrita",
 length: 204,
@@ -72,7 +72,7 @@ published_on: Date.new(2013, 3, 12)
 )
 
 Song.create(source: "Spotify",
-url: "https://open.spotify.com/track/5BSclXJTa9B0iURhUjZo50?si=cbf79fc5a64145bf",
+url: "https://open.spotify.com/embed/track/5BSclXJTa9B0iURhUjZo50",
 author: "Shakira",
 title: "La Tortura",
 length: 212,
@@ -80,7 +80,7 @@ published_on: Date.new(2005, 6, 3)
 )
 
 Song.create(source: "Spotify",
-url: "https://open.spotify.com/track/4MoqD2qgWRx6y07OiRIdMV?si=9f5a532713974d1d",
+url: "https://open.spotify.com/embed/track/4MoqD2qgWRx6y07OiRIdMV",
 author: "Juan Pablo Vega",
 title: "Las Olas",
 length: 199,
@@ -88,7 +88,7 @@ published_on: Date.new(2017, 11, 17)
 )
 
 Song.create(source: "Spotify",
-url: "https://open.spotify.com/track/06yQX80E6F1tMHcL0q3NVm?si=e272cd9e81a04c89",
+url: "https://open.spotify.com/embed/track/06yQX80E6F1tMHcL0q3NVm",
 author: "Ana Tijoux",
 title: "1977",
 length: 201,
@@ -98,7 +98,7 @@ published_on: Date.new(2014, 5, 9)
 puts "Creating podcasts"
 
 Podcast.create(source: "Spotify",
-  url: "https://open.spotify.com/episode/1PD1RSFQWvFZRnEDgUuGYK?si=91b9085e1d1543e6",
+  url: "https://open.spotify.com/embed/episode/1PD1RSFQWvFZRnEDgUuGYK?si=91b9085e1d1543e6",
   author: "Ted en Español",
   title: "Inteligencia artificial y la estructura del universo",
   length: 640,
@@ -106,7 +106,7 @@ Podcast.create(source: "Spotify",
   )
 
 Podcast.create(source: "Spotify",
-  url: "https://open.spotify.com/episode/6k4jphjpmnqp5ZrqC0SbOz?si=f77d3534932840a2",
+  url: "https://open.spotify.com/embed/episode/6k4jphjpmnqp5ZrqC0SbOz?si=f77d3534932840a2",
   author: "Ídolos",
   title: "Ídolos - Janis Joplin, la bruja cósmica",
   length: 1266,
@@ -114,7 +114,7 @@ Podcast.create(source: "Spotify",
   )
 
 Podcast.create(source: "Spotify",
-  url: "https://open.spotify.com/episode/6TosCv0FsOhAxdKobqz83Y?si=83ecd4f70ab84f61",
+  url: "https://open.spotify.com/embed/episode/6TosCv0FsOhAxdKobqz83Y?si=83ecd4f70ab84f61",
   author: "El cine de LoQueYoTeDiga",
   title: "La Tragedia de Macbeth",
   length: 570,
@@ -122,7 +122,7 @@ Podcast.create(source: "Spotify",
   )
 
 Podcast.create(source: "Spotify",
-  url: "https://open.spotify.com/episode/185LfPbCMVLLCw9viyHUgl?si=05ac47e3545e47ff",
+  url: "https://open.spotify.com/embed/episode/185LfPbCMVLLCw9viyHUgl?si=05ac47e3545e47ff",
   author: "ESPN Deportes",
   title: "Las claves del repentino crecimiento del Barcelona con Xavi Hernández",
   length: 1750,
@@ -130,7 +130,7 @@ Podcast.create(source: "Spotify",
   )
 
 Podcast.create(source: "Spotify",
-  url: "https://open.spotify.com/track/06yQX80E6F1tMHcL0q3NVm?si=e272cd9e81a04c89",
+  url: "https://open.spotify.com/embed/episode/4etjMs9T4kiruNwpNWeF4p?utm_source=generator&theme=0",
   author: "Estirando el Chicle",
   title: "Vivir o Morir con Sofía Cristo",
   length: 6000,
@@ -176,4 +176,3 @@ Article.create(source: "RT",
   title: "Escenas del periodismo mexicano: de las violencias contra los trabajadores de prensa a la hipocresía de los privilegiados",
   published_on: Date.new(2022, 2, 16)
   )
-
