@@ -11,5 +11,5 @@ class User < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
 
   validates :first_name, :last_name, presence: true
-  validates :age, numericality: { only_integer: true }
+  # validates :age, numericality: { only_integer: true }
 end
