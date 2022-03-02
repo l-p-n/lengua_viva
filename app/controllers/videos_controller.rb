@@ -1,6 +1,7 @@
 class VideosController < ApplicationController
   def show
-    @video = Video.find(params[:id])
-    @url_id = @video.url.split("?v=")[1]
+    @comment = Comment.new
+    @resource = Video.find(params[:id])
+    @url_id = @resource.url.split("?v=")[1]
   end
 end

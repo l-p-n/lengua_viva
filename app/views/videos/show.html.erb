@@ -1,3 +1,13 @@
-<%= render 'shared/resource_title', resource: @video %>
+<div class="container">
+  <%= render 'shared/resource_title', resource: @resource %>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @url_id %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="d-flex justify-content-between w-100">
+
+      <iframe class="spotify-song" width="680" height="380" src="https://www.youtube.com/embed/<%= @url_id %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class="comments-container box-shadow-basic round-corners ml-4">
+      <%= render "shared/comments", resource: @resource %>
+      <%= render "shared/new_comment_form", resource: @resource %>
+    </div>
+  </div>
+</div>
