@@ -17,7 +17,7 @@
     <% unless @homepage %>
       <%= render "shared/navbar" %>
     <% end %>
-    <body class="<%= @article_show_page ? "page-background" : "" %>">
+    <body class="<%= @resource_show_page ? "page-background" : "" %>">
 
     <%= yield %>
   </body>
