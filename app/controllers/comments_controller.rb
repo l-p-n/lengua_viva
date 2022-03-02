@@ -11,6 +11,13 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    @resource = @comment.resource
+    @comment.destroy
+    redirect_to @comment.resource
+  end
+
   private
 
   def comment_params

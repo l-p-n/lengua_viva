@@ -17,6 +17,18 @@
 
       <p class="p-3"><%= comment.content %></p>
 
+      <% if comment.user == current_user %>
+        <%= link_to comment_path(comment),
+                                          method: :delete,
+                                          class: "del",
+                                          remote: true,
+                                          data: { confirm: "Are you sure?" } do %>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                          <% end %>
+      <% end %>
+
+
+
     </div>
   <% end %>
 <% else %>
