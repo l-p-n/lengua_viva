@@ -2,6 +2,6 @@ class VideosController < ApplicationController
   def show
     @comment = Comment.new
     @resource = Video.find(params[:id])
-    @url_id = @resource.url.split("?v=")[1]
+    @like = Like.where(user: current_user, resource: @resource)
   end
 end
