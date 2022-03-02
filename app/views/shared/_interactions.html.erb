@@ -1,9 +1,11 @@
-<% if @resource.liked?(current_user) %>
-  <%= link_to resource_likes_path(@resource), method: :post, class: "like-btn" do %>
-    <i class="fa-solid fa-heart"></i>
+<div>
+  <% if @resource.liked?(current_user) %>
+    <%= link_to like_path(@like), method: :delete, class: "like-btn" do %>
+      <i class="fa-solid fa-heart"></i>
+    <% end %>
+  <% else %>
+    <%= link_to resource_likes_path(@resource), method: :post, class: "like-btn" do %>
+      <i class="fa-regular fa-heart"></i>
+    <% end %>
   <% end %>
-<% else %>
-  <%= link_to resource_likes_path(@resource), method: :post, class: "like-btn" do %>
-    <i class="fa-regular fa-heart"></i>
-  <% end %>
-<% end %>
+</div>
