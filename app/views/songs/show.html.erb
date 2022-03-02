@@ -1,10 +1,15 @@
 <div class="container">
   <%= render "shared/resource_title", resource: @resource %>
-  <iframe src="<%=@resource.url%>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-  <p>Note: You have to be logged into your Spotify account to listen to the full song.</p>
 
-  <div class="comments-container box-shadow-basic w-50 round-corners">
-    <%= render "shared/comments", resource: @resource %>
-    <%= render "shared/new_comment_form", resource: @resource %>
+  <div class="d-flex justify-content-between w-100">
+    <div class="d-flex flex-column align-items-center">
+      <iframe src="<%=@resource.url%>" width="500" height="450" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <p class= "my-3">Note: You have to be logged into your Spotify account to listen to the full song.</p>
+    </div>
+
+    <div class="comments-container box-shadow-basic round-corners ml-4">
+      <%= render "shared/comments", resource: @resource %>
+      <%= render "shared/new_comment_form", resource: @resource %>
+    </div>
   </div>
 </div>
