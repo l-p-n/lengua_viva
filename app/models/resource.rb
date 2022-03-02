@@ -6,4 +6,8 @@ class Resource < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
 
   validates :title, :type, :author, :url, presence: true
+
+  def to_show_path
+    "#{type.downcase.pluralize}/show"
+  end
 end

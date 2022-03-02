@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :users, only: :show
-  resources :videos, only: :show do
-    resources :comments, only: [:create]
-  end
+  resources :videos, only: :show
   resources :songs, only: :show
   resources :podcasts, only: :show
 

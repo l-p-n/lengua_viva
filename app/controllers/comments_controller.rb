@@ -1,18 +1,14 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
-    if params[:video_id]
-      @comment.resource = Video.find(params[:video_id])
-    elsif params[:song_id]
-      @comment.resource = Song.find(params[:song_id])
-    elsif params[:article_id]
-      @comment.resource = Article.find(params[:article_id])
-    elsif params[:podcast_id]
-      @comment.resource = Podcast.find(params[:podcast_id])
-    end
+    @resource = Resource.find(params[:resource_id])
+    @comment.resource = @resource
     @comment.user = current_user
-    @comment.save
-    redirect_to @comment.resource
+    if @comment.save
+      redirect_to @comment.resource
+    else
+      render @resource.to_show_path
+    end
   end
 
   private
