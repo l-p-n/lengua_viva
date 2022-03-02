@@ -3,6 +3,7 @@ class PodcastsController < ApplicationController
 
   def show
     @comment = Comment.new
+    @resource = Resource.find(params[:id])
   end
 
   private
