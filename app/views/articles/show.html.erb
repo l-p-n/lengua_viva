@@ -1,0 +1,25 @@
+<div>
+
+  <div class="articles-container">
+
+    <div class="row">
+      <%= image_tag "articles_cropped.png", alt: "image of newspaper", id: "articles" %>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12 col-lg-8">
+          <%= render "shared/resource_title", resource: @article %>
+          <div style="margin-left:30px; margin-top:28px;">
+            <%= link_to "Read article", @article.url %>
+          </div>
+          <br>
+          <br>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <h4>Comments section</h4>
+        </div>
+    </div>
+
+  </div>
+</div>
