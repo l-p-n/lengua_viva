@@ -5,7 +5,7 @@
 @import "colors";
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Open Sans";
+$body-font: "Raleway", "Open Sans";
 $headers-font: "Raleway", "Open Sans";
 
 
@@ -34,9 +34,10 @@ h3 {
 }
 
 h1, h4, h5, h3 {
-  color: $blue
+  color: $blue;
 }
 
 p {
   color: $gray;
+  font-weight: light;
 }
