@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @resource = @comment.resource
     @comment.destroy
-    redirect_to @comment.resource
+    redirect_to @resource
   end
 
   private
