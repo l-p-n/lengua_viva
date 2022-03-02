@@ -1,12 +1,19 @@
-.navbar-lewagon {
+.navbar-lenguaviva {
   justify-content: space-between;
-  background: white;
+  background: $blue;
+  height: 60px;
+
+  .navbar-logo {
+    height: 45px;
+    object-fit: cover;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-lenguaviva .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-item-link {
+  padding-top: 5px;
+  margin-right: 16px;
 }
