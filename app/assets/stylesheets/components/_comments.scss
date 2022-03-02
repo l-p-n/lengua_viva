@@ -1,0 +1,75 @@
+.comments-container {
+  width: 40%;
+  position: relative;
+  h2 {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+  padding: 64px 24px 24px 24px;
+
+}
+
+.comment-container {
+  border-bottom: 1px solid $pink;
+  p {
+    margin: 0;
+  }
+  .del {
+    text-align: right;
+    color: $pink;
+    transition: 0.3s;
+  }
+  .del:hover {
+    color: $pink;
+    color: #f382d7;
+  }
+}
+
+.comment-details {
+  p {
+    margin: 0 12px;
+  }
+}
+
+.comment-time-ago {
+  font-size: 14px;
+}
+
+.new-comment-container {
+  input {
+    margin: 0;
+    height: 50px;
+  }
+
+  .comment-form {
+    position: relative;
+  }
+
+  .comment-button {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 0;
+    color: $pink;
+    position: absolute;
+    right: 72px;
+    top: 12px;
+  }
+
+  .comment-button:hover {
+    color: $darkerpink;
+    background-color: $blue;
+  }
+
+  .comment_content {
+    width: 75%;
+  }
+
+  textarea {
+    resize: none;
+    border-radius: 24px;
+    padding-right: 64px;
+  }
+}

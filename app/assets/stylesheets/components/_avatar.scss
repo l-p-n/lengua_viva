@@ -7,8 +7,18 @@
 
 .avatar-large {
   width: 56px;
+  height: 56px;
   border-radius: 50%;
+  border: 2px solid $pink;
 }
+
+.avatar-small {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid $pink;
+}
+
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;

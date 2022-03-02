@@ -1,0 +1,36 @@
+<h2><i class="fa-regular fa-comments"></i></i></h2>
+<% if resource.comments.count > 0 %>
+  <% resource.comments.each do |comment| %>
+
+    <div class="d-flex flex-column comment-container py-3">
+
+      <div class= "d-flex justify-content-between comment-details">
+
+        <div class="d-flex align-items-center">
+          <%= image_tag "default_avatar", class: "avatar-small" %>
+          <p><%= comment.user.first_name %> <%= comment.user.last_name %></p>
+        </div>
+
+        <p class="comment-time-ago"><%= time_ago_in_words(comment.created_at) %> ago</p>
+
+      </div>
+
+      <p class="p-3"><%= comment.content %></p>
+
+      <% if comment.user == current_user %>
+        <%= link_to comment_path(comment),
+                                          method: :delete,
+                                          class: "del",
+                                          remote: true,
+                                          data: { confirm: "Are you sure?" } do %>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                          <% end %>
+      <% end %>
+
+
+
+    </div>
+  <% end %>
+<% else %>
+  <p>No comments yet.</p>
+<% end %>
