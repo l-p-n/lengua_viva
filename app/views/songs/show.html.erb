@@ -3,6 +3,8 @@
   <iframe src="<%=@resource.url%>" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   <p>Note: You have to be logged into your Spotify account to listen to the full song.</p>
 
-  <%= render "shared/comments", resource: @resource %>
-  <%= render "shared/new_comment_form", resource: @resource %>
+  <div class="comments-container box-shadow-basic w-50 round-corners">
+    <%= render "shared/comments", resource: @resource %>
+    <%= render "shared/new_comment_form", resource: @resource %>
+  </div>
 </div>
