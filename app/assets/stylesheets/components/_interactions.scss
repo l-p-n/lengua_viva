@@ -1,0 +1,21 @@
+.bookmark-icon, .like-icon {
+  color: $pink !important;
+  text-decoration: none;
+  font-size: 28px !important;
+  &:hover {
+    color: $darkerpink;
+  }
+}
+
+.like-icon {
+  margin: 0 0 16px 12px;
+}
+
+.bookmark-icon {
+  margin: 0 0 8px 12px !important;
+}
+
+.view-btn {
+  margin-top: 16px;
+  text-decoration: none;
+}

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :resources, only: [:index, :new, :create] do
     resources :likes, only: [:create]
     resources :bookmarks, only: [:create]
-    resources :views, only: :create
+    resources :views, only: [:create]
     resources :reviews, only: [:create]
     resources :comments, only: [:create]
   end
