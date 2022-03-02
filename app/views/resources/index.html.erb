@@ -1,33 +1,126 @@
-<h1>Hello world</h1>
 <div class="container">
+
+  <h2>TOP RATED</h2>
   <div class="card-container">
     <% @resources.each do |resource| %>
 
     <div class="resource-card">
-
-        <div class="card-image">
-        </div>
-
-        <div class="card-info">
-          <div class="resource-details">
-          <h5><%= resource.title %></h5>
+      <div class="resource-header">
+        <div class="resource-title-author">
+          <div class="resource-title">
+            <h5><strong><%= resource.title.upcase %></strong></h5>
+          </div>
           <p><%= resource.author %></p>
-          </div>
-          <div class="resource-format">
-          <p> <%= resource.type %></p>
-          </div>
         </div>
-
-        <div class="card-info">
-          <div class="resource-tags">
-            <p>Cooking</p>
-          </div>
-          <div class="resource-likes">
-            <i class="fa-solid fa-thumbs-up"></i>
-          </div>
+        <div class="resource-format">
+           <% if resource.type == "Video" %>
+                <p><i class="fa-solid fa-video"></i></p>
+              <% elsif resource.type == "Article" %>
+                <p><i class="fa-brands fa-readme"></i></p>
+              <% elsif resource.type == "Song"%>
+                <p><i class="fa-solid fa-music"></i></p>
+              <% elsif resource.type == "Podcast" %>
+                <p><i class="fa-solid fa-podcast"></i></p>
+              <% else %>
+                <p><i class="fa-solid fa-circle-question">
+              <% end %></i></p>
         </div>
-
       </div>
+        <div class="card-image">
+          <img src="/assets/Lengua Viva solid.png">
+          <div class="card-tags">
+              <p>Cooking</p>
+          </div>
+          <div class="card-details">
+            <div class="resource-likes">
+              <p><i class="fa-solid fa-eye"></i></i> 12  <i class="fa-solid fa-thumbs-up"></i> 12  <i class="fas fa-bookmark"></i><i class="fa-regular fa-bookmark"></i></p>
+            </div>
+          </div>
+        </div>
+    </div>
     <% end %>
   </div>
+
+  <h2>JUST FOR YOU</h2>
+  <div class="card-container">
+    <% @resources.each do |resource| %>
+
+    <div class="resource-card">
+      <div class="resource-header">
+        <div class="resource-title-author">
+          <div class="resource-title">
+            <h5><strong><%= resource.title.upcase %></strong></h5>
+          </div>
+          <p><%= resource.author %></p>
+        </div>
+        <div class="resource-format">
+           <% if resource.type == "Video" %>
+                <p><i class="fa-solid fa-video"></i></p>
+              <% elsif resource.type == "Article" %>
+                <p><i class="fa-brands fa-readme"></i></p>
+              <% elsif resource.type == "Song"%>
+                <p><i class="fa-solid fa-music"></i></p>
+              <% elsif resource.type == "Podcast" %>
+                <p><i class="fa-solid fa-podcast"></i></p>
+              <% else %>
+                <p><i class="fa-solid fa-circle-question">
+              <% end %></i></p>
+        </div>
+      </div>
+        <div class="card-image">
+          <img src="/assets/Lengua Viva solid.png">
+          <div class="card-tags">
+              <p>Cooking</p>
+          </div>
+          <div class="card-details">
+            <div class="resource-likes">
+              <p><i class="fa-solid fa-eye"></i></i> 12  <i class="fa-solid fa-thumbs-up"></i> 12  <i class="fas fa-bookmark"></i><i class="fa-regular fa-bookmark"></i></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+
+  <h2>NEW THIS WEEK</h2>
+  <div class="card-container">
+    <% @resources.each do |resource| %>
+
+    <div class="resource-card">
+      <div class="resource-header">
+        <div class="resource-title-author">
+          <div class="resource-title">
+            <h5><strong><%= resource.title.upcase %></strong></h5>
+          </div>
+          <p><%= resource.author %></p>
+        </div>
+        <div class="resource-format">
+           <% if resource.type == "Video" %>
+                <p><i class="fa-solid fa-video"></i></p>
+              <% elsif resource.type == "Article" %>
+                <p><i class="fa-brands fa-readme"></i></p>
+              <% elsif resource.type == "Song"%>
+                <p><i class="fa-solid fa-music"></i></p>
+              <% elsif resource.type == "Podcast" %>
+                <p><i class="fa-solid fa-podcast"></i></p>
+              <% else %>
+                <p><i class="fa-solid fa-circle-question">
+              <% end %></i></p>
+        </div>
+      </div>
+        <div class="card-image">
+          <img src="/assets/Lengua Viva solid.png">
+          <div class="card-tags">
+              <p>Cooking</p>
+          </div>
+          <div class="card-details">
+            <div class="resource-likes">
+              <p><i class="fa-solid fa-eye"></i></i> 12  <i class="fa-solid fa-thumbs-up"></i> 12  <i class="fas fa-bookmark"></i><i class="fa-regular fa-bookmark"></i></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+
 </div>

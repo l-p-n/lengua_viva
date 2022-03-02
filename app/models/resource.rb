@@ -10,4 +10,8 @@ class Resource < ApplicationRecord
   def to_show_path
     "#{type.downcase.pluralize}/show"
   end
+
+  def liked?(user)
+    likes.find { |like| like.user == user }
+  end
 end
