@@ -1,11 +1,31 @@
 <div>
   <% if @resource.liked?(current_user) %>
+
     <%= link_to like_path(@like), method: :delete, class: "like-btn" do %>
       <i class="fa-solid fa-heart"></i>
     <% end %>
+
   <% else %>
+
     <%= link_to resource_likes_path(@resource), method: :post, class: "like-btn" do %>
       <i class="fa-regular fa-heart"></i>
     <% end %>
+
+  <% end %>
+
+  <% if @resource.bookmarked?(current_user) %>
+
+    <%= link_to bookmark_path(@bookmark), method: :delete, class: "bookmark-btn" do %>
+      <i class="fa-solid fa-bookmark"></i>
+      Bookmarked
+    <% end %>
+
+  <% else %>
+
+    <%= link_to resource_bookmarks_path(@resource), method: :post, class: "bookmark-btn" do %>
+      <i class="fa-regular fa-bookmark"></i>
+      Not bookmarked
+    <% end %>
+
   <% end %>
 </div>
