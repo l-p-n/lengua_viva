@@ -5,6 +5,7 @@
     <div class="d-flex flex-column align-items-center">
       <iframe src="<%=@resource.url%>" width="80%" height="450" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       <p class= "my-3">Note: You have to be logged into your Spotify account to listen to the full song.</p>
+      <%= render "shared/interactions" %>
     </div>
 
     <div class="comments-container box-shadow-basic round-corners ml-4">

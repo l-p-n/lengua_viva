@@ -10,6 +10,7 @@
         <h4>by <%= @resource.author %></h3>
         <br>
         <%= link_to "Read article", @resource.url %>
+        <%= render "shared/interactions" %>
       </div>
 
       <div class="comments-container box-shadow-basic round-corners ml-4">
