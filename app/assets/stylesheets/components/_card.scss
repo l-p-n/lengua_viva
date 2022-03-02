@@ -5,6 +5,7 @@
 .container h2 {
   margin: 24px 16px;
   padding: 0;
+  color: $pink;
 }
 
 .card-container {
@@ -26,6 +27,11 @@
   box-shadow: 2px 2px 5px $pink;
   transition: 0.2s;
   overflow: hidden;
+}
+
+.resource-card:hover {
+  transition: 0.2s ease;
+  transform: scale(1.1);
 }
 
 .resource-header {
