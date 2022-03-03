@@ -1,12 +1,11 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Raleway:wght@100;300;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&family=Poppins:wght@100;200&family=Raleway:wght@100;300;500&display=swap');
 
 @import "colors";
 
 // Define fonts for body and headers
-$body-font: "Raleway", "Open Sans";
-$headers-font: "Raleway", "Open Sans";
+$body-font: "Poppins", "Open Sans";
+$headers-font: "Manrope", "Open Sans";
 
 
 
@@ -26,7 +25,8 @@ h1 {
 
 h2 {
   font-size: 48px !important;
-  color: $pink;
+  font-weight: 800 !important;
+  color: $secondarycolor;
 }
 
 h3 {
@@ -34,7 +34,7 @@ h3 {
 }
 
 h1, h4, h5, h3 {
-  color: $blue;
+  color: $primarycolor;
 }
 
 p {

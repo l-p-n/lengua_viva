@@ -1,37 +1,23 @@
-.container {
-  margin: 0;
-}
+// .container {
+//   display: flex;
+//   justify-content: center;
+// }
 
-.container h2 {
-  margin: 24px 16px;
-  padding: 0;
-  color: $pink;
-}
-
-.card-container {
-  display: grid;
-  grid-column-gap: 32px;
-  row-gap: 48px;
-  margin: 32px 0px;
-  grid-auto-flow: column;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scrollbar-color: $pink;
-  background-color: FAFAFA !important;
-}
 
 .resource-card {
-  width: 450px;
-  height: 300px;
+  width: 400px;
+  height: 250px;
   background-color: white;
   border-radius: 3px;
-  box-shadow: 2px 2px 5px $pink;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
 
+
 .resource-card:hover {
   transition: 0.2s ease;
-  transform: scale(1.1);
+  transform: scale(1.01);
+  box-shadow: 3px 3px 5px $secondarycolor;
 }
 
 .resource-header {
@@ -39,6 +25,8 @@
   height: 25%;
   margin: 16px 16px 6px 16px;
   align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .resource-title-author {
@@ -118,28 +106,28 @@
 }
 
 .fa-video {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }
 
 .fa-readme {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }
 .fa-music {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }
 .fa-podcast {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }
 .fa-circle-question {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }

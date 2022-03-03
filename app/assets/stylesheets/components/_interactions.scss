@@ -1,9 +1,9 @@
 .bookmark-icon, .like-icon {
-  color: $pink !important;
+  color: $secondarycolor !important;
   text-decoration: none;
   font-size: 28px !important;
   &:hover {
-    color: $darkerpink;
+    color: $darkersecondarycolor;
   }
 }
 

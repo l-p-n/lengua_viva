@@ -176,3 +176,37 @@ Article.create(source: "RT",
   title: "Escenas del periodismo mexicano: de las violencias contra los trabajadores de prensa a la hipocresía de los privilegiados",
   published_on: Date.new(2022, 2, 16)
   )
+
+require 'open-uri'
+require 'json'
+
+base = "https://open.spotify.com/oembed?url="
+arr = []
+Song.all.each do |song|
+  new_url = base + song.url
+  new_url = new_url.gsub("embed/", "") if new_url.include?("embed/")
+  URI.open(new_url) {|f| f.each_line {|line| arr << line } }
+  json = JSON.parse(arr[0])
+  song.update(thumbnail_url: json["thumbnail_url"])
+  arr = []
+end
+
+Podcast.all.each do |podcast|
+  new_url = base + podcast.url
+  new_url = new_url.gsub("embed/", "") if new_url.include?("embed/")
+  URI.open(new_url) {|f| f.each_line {|line| arr << line } }
+  json = JSON.parse(arr[0])
+  podcast.update(thumbnail_url: json["thumbnail_url"])
+  arr = []
+end
+
+Article.all.each do |article|
+  if article.source == "El Mundo"
+    article.update(thumbnail_url: "/assets/1280px-El_Mundo_logo.svg.png")
+  elsif article.source == "BBC"
+    article.update(thumbnail_url: "/assets/bbc.png")
+  elsif article.source == "El País"
+    article.update(thumbnail_url: "/assets/El Pais.png")
+  else article.update(thumbnail_url: "/assets/articles.png")
+  end
+end

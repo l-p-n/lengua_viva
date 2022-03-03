@@ -1,0 +1,18 @@
+
+.card-container {
+  width: 90vw;
+  display: grid;
+  padding-top: 5px;
+  grid-column-gap: 32px;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 48px;
+  margin: 16px 0px;
+  grid-auto-flow: column;
+  height: 270px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-color: $secondarycolor;
+}
+.card-container a {
+  text-decoration: none;
+}

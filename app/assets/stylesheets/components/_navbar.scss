@@ -1,7 +1,9 @@
 .navbar-lenguaviva {
   justify-content: space-between;
-  background: $blue;
+  background: $white;
   height: 60px;
+  color: $secondarycolor !important;
+  font-weight: bold;
 
   .navbar-logo {
     height: 45px;
