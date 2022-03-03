@@ -1,20 +1,5 @@
 .lengua-viva-footer {
   background-color: $blue;
-  // height: 100px;
-  // margin-top: 80px;
-
-  // .footer-socials {
-  //   font-size: 26px;
-  //   padding-top: 10px;
-  //   a {
-  //     color: $pink;
-  //     margin: 0 24px;
-  //     transition: 0.2s;
-  //   }
-  //   i:hover {
-  //     color: $red;
-  //   }
-  // }
 }
 
 .lv-footer-container {
@@ -28,7 +13,6 @@
 }
 
 .footer-content {
-  // padding: 0 24px 48px 0;
   width: 170px;
 }
 
@@ -36,22 +20,24 @@
 list-style: none;
 margin: 0;
 padding: 0;
-// color: $off-white;
 font-size: 14px;
-color: rgb(189, 200, 228);
 }
 
 .footer-content h6 {
   color: $pink;
-  font-weight: bold;
 }
 
 .fa-brands {
   font-size: 23px;
-  color: rgb(189, 200, 228);
   padding-bottom: 8px;
-  //   a {
-  //     color: $pink;
-  //     margin: 0 24px;
-  //     transition: 0.2s;
+}
+
+a {
+  color: rgb(189, 200, 228);
+  text-decoration: none;
+}
+
+a:hover {
+  color: $secondary;
+  text-decoration: none;
 }
