@@ -36,7 +36,9 @@
 list-style: none;
 margin: 0;
 padding: 0;
-color: $off-white;
+// color: $off-white;
+font-size: 14px;
+color: rgb(189, 200, 228);
 }
 
 .footer-content h6 {
@@ -45,9 +47,9 @@ color: $off-white;
 }
 
 .fa-brands {
-  font-size: 26px;
-  color: $off-white;
-  padding-top: 10px;
+  font-size: 23px;
+  color: rgb(189, 200, 228);
+  padding-bottom: 8px;
   //   a {
   //     color: $pink;
   //     margin: 0 24px;
