@@ -2,19 +2,21 @@
   <%= render "shared/resource_title", resource: @resource %>
   <br>
   <div class="d-flex justify-content-around w-100">
-
     <div class="d-flex flex-column align-items-end">
       <p style="font-size:13px; font-weight:400;" class= "mb-2">Note: You have to be logged into your Spotify account to listen to the full podcast.</p>
       <iframe src="<%=@resource.url%>" width="680" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       <%= render "shared/interactions" %>
     </div>
-
-
     <div class="comments-container box-shadow-basic round-corners ml-4">
       <%= render "shared/comments", resource: @resource %>
       <%= render "shared/new_comment_form", resource: @resource %>
     </div>
   </div>
+
+  <div>
+    <%= render "shared/reviews", resource: @resource %>
+  </div>
+  <br>
   <br>
   <br>
 </div>
