@@ -1,5 +1,5 @@
 .lengua-viva-footer {
-  background-color: $blue;
+  background-color: $primarycolor;
   // height: 100px;
   // margin-top: 80px;
 
@@ -7,7 +7,7 @@
   //   font-size: 26px;
   //   padding-top: 10px;
   //   a {
-  //     color: $pink;
+  //     color: $secondarycolor;
   //     margin: 0 24px;
   //     transition: 0.2s;
   //   }
@@ -38,11 +38,11 @@ margin: 0;
 padding: 0;
 // color: $off-white;
 font-size: 14px;
-color: rgb(189, 200, 228);
+color: $blue-grey;
 }
 
 .footer-content h6 {
-  color: $pink;
+  color: $secondarycolor;
   font-weight: bold;
 }
 
@@ -51,7 +51,7 @@ color: rgb(189, 200, 228);
   color: rgb(189, 200, 228);
   padding-bottom: 8px;
   //   a {
-  //     color: $pink;
+  //     color: $secondarycolor;
   //     margin: 0 24px;
   //     transition: 0.2s;
 }
