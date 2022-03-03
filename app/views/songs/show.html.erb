@@ -1,4 +1,4 @@
-<div class="container-lg-bordered-no-mt">
+<div class="container-lg-bordered box-shadow-basic">
   <%= render "shared/resource_title", resource: @resource %>
   <br>
   <div class="d-flex justify-content-around w-100">
@@ -11,7 +11,7 @@
       <%= render "shared/interactions" %>
     </div>
 
-    <div class="comments-container box-shadow-basic round-corners ml-4">
+    <div class="comments-container ml-4">
       <%= render "shared/comments", resource: @resource %>
       <%= render "shared/new_comment_form", resource: @resource %>
     </div>
