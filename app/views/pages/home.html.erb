@@ -1,25 +1,16 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col landing-bg">
-      <div class="container landing-text">
-        <div class="typewriter">
-          <h1>Level Up Your Language</h1>
-        </div>
-          <h3>Practise foreign languages with authentic materials.</h2>
-          <p>Lengua Viva gives you personalised recommendations for songs, podcasts, articles and videos in your language of choice</p>
-        <h2><%= link_to "Login", new_user_session_path %></h2>
+<div class="d-flex m-0 justify-content-between align-items-between">
+  <div class="w-50 landing-bg px-4">
+    <div class="container landing-text">
+      <div class="typewriter">
+        <h1>Level Up Your Language</h1>
       </div>
-    </div>
-
-    <div class="col landing-bg">
-      <div class="container">
-      <%= render "image_carousel" %>
-      </div>
+        <h3>Practise foreign languages with authentic materials.</h2>
+        <p class="my-4">Lengua Viva gives you personalised recommendations for songs, podcasts, articles and videos in your language of choice</p>
+        <%= link_to "Sign Up Now", new_user_registration_path, class: "btn my-4 btn-info sign-up-btn" %>
 
     </div>
-
   </div>
 
-</div>
-
-<%= javascript_pack_tag 'homepage' %>
+  <div class="w-50 landing-bg">
+    <%= render "image_carousel" %>
+  </div>
