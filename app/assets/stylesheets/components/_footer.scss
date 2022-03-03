@@ -14,6 +14,15 @@
 
 .footer-content {
   width: 170px;
+  a {
+    color: rgb(189, 200, 228);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $secondarycolor;
+    text-decoration: none;
+  }
 }
 
 .footer-content ul {
@@ -24,24 +33,10 @@
 }
 
 .footer-content h6 {
-  color: $blue-grey;
-}
-
-.footer-content h6 {
   color: $secondarycolor;
 }
 
 .fa-brands {
   font-size: 23px;
   padding-bottom: 8px;
-}
-
-a {
-  color: rgb(189, 200, 228);
-  text-decoration: none;
-}
-
-a:hover {
-  color: $secondarycolor;
-  text-decoration: none;
 }
