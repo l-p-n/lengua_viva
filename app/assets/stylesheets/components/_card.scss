@@ -5,7 +5,7 @@
 .container h2 {
   margin: 24px 16px;
   padding: 0;
-  color: $pink;
+  color: $secondarycolor;
 }
 
 .card-container {
@@ -16,7 +16,7 @@
   grid-auto-flow: column;
   overflow-x: scroll;
   overflow-y: hidden;
-  scrollbar-color: $pink;
+  scrollbar-color: $secondarycolor;
 }
 
 .resource-card {
@@ -24,7 +24,7 @@
   height: 300px;
   background-color: white;
   border-radius: 3px;
-  box-shadow: 2px 2px 5px $pink;
+  box-shadow: 2px 2px 5px $secondarycolor;
   overflow: hidden;
 }
 
@@ -117,28 +117,28 @@
 }
 
 .fa-video {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }
 
 .fa-readme {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }
 .fa-music {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }
 .fa-podcast {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }
 .fa-circle-question {
-  color: $pink;
+  color: $secondarycolor;
   font-size: 24px;
   vertical-align: middle;
 }

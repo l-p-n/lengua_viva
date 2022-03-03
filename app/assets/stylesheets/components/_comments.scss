@@ -11,18 +11,17 @@
 }
 
 .comment-container {
-  border-bottom: 1px solid $pink;
+  border-bottom: 1px solid $secondarycolor;
   p {
     margin: 0;
   }
   .del {
     text-align: right;
-    color: $pink;
+    color: $secondarycolor;
     transition: 0.3s;
   }
   .del:hover {
-    color: $pink;
-    color: #f382d7;
+    color: $darkersecondarycolor;
   }
 }
 
@@ -52,15 +51,15 @@
     border-radius: 50%;
     font-size: 16px;
     padding: 0;
-    color: $pink;
+    color: $secondarycolor;
     position: absolute;
     right: 72px;
     top: 12px;
   }
 
   .comment-button:hover {
-    color: $darkerpink;
-    background-color: $blue;
+    color: $darkersecondarycolor;
+    background-color: $primarycolor;
   }
 
   .comment_content {
