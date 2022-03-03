@@ -4,7 +4,7 @@
   height: 60px;
 
   .navbar-logo {
-    height: 45px;
+    height: 42px;
     object-fit: cover;
   }
 }
@@ -16,4 +16,14 @@
 .nav-item-link {
   padding-top: 5px;
   margin-right: 16px;
+}
+
+.nav-link {
+  font-weight: 400;
+  color: $blue-grey;
+}
+
+.dropdown-item {
+  color: $secondarycolor;
+  font-weight: 400;
 }
