@@ -1,20 +1,21 @@
 .comments-container {
   width: 35%;
   position: relative;
-  .fa-comments {
-    position: absolute;
-    right: 16px;
-    top: 16px;
-    font-size: 48px;
-    color: $secondarycolor;
-  }
-  padding: 64px 24px 24px 24px;
-
+  padding: 0 24px 24px 24px;
+  h2 {
+    font-size: 28px !important;
 }
+
+.existing-comments {
+  height: 500px;
+  overflow: scroll;
+}
+
 
 .comment-container {
   border-bottom: 1px solid #ced4da;
   overflow-wrap: break-word;
+  }
   p {
     margin: 0;
   }
