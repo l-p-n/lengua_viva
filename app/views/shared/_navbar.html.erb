@@ -1,8 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-lenguaviva box-shadow-basic">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "LenguaVivaTransparentcropped.png", class: "navbar-logo" %>
-    <% end %>
+    <%= link_to image_tag("LenguaVivaTransparentcropped.png", height: 42), root_path, alt: "Lengua Viva logo" %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,7 +10,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item-link active">
-            <%= link_to "My Feed", "#", class: "nav-link" %>
+            <%= link_to "My Feed", resources_path, class: "nav-link" %>
           </li>
           <li class="nav-item-link">
             <%= link_to "My Collection", "#", class: "nav-link" %>
@@ -21,7 +19,7 @@
             <%= image_tag "default_avatar", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Profile", "#", class: "dropdown-item" %>
-              <%= link_to "My Feed", "#", class: "dropdown-item" %>
+              <%= link_to "My Feed", resources_path, class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
