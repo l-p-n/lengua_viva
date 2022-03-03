@@ -1,7 +1,12 @@
 .navbar-lenguaviva {
   justify-content: space-between;
-  background: $primarycolor;
+  background: $white;
   height: 60px;
+
+  .navbar-logo {
+    height: 45px;
+    object-fit: cover;
+  }
 }
 
 .navbar-lenguaviva .navbar-collapse {
