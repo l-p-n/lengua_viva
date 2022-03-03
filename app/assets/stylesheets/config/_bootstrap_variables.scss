@@ -23,10 +23,5 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px,
-//   xxl: 1240px // changed from 1320
-// );
+$dropdown-link-hover-color:         $primarycolor;
+$dropdown-link-hover-bg:            $blue-grey;
