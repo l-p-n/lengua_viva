@@ -2,11 +2,6 @@
   justify-content: space-between;
   background: $primarycolor;
   height: 60px;
-
-  .navbar-logo {
-    height: 42px;
-    object-fit: cover;
-  }
 }
 
 .navbar-lenguaviva .navbar-collapse {
@@ -21,6 +16,9 @@
 .nav-link {
   font-weight: 400;
   color: $blue-grey;
+  &:hover {
+    color: $secondarycolor;
+  }
 }
 
 .dropdown-item {
