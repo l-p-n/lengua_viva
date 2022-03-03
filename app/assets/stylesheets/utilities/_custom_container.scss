@@ -9,13 +9,10 @@
 
 .container-lg-bordered {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
   max-width: 1240px;
-  border-left: 1px solid $secondarycolor;
-  border-right: 1px solid $secondarycolor;
-  margin-top: 32px;
+  margin: 48px auto;
   background-color: white;
+  border-radius: 5px;
 }
 
 .container-lg-bordered-no-mt {

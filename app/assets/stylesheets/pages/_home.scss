@@ -1,1 +1,53 @@
 // Specific CSS for your home-page
+
+
+.landing-bg {
+  background-color: $primarycolor;
+  height: 100vh;
+  h1 {
+    color: $secondarycolor;
+    font-weight: 800;
+    font-size: 47px !important;
+    text-shadow: 2px 2px 8px rgba(20,20,20, 0.2);
+  }
+
+  .landing-text {
+    text-align: center;
+    padding-top: 300px;
+    height: 150px;
+  }
+
+  h3 {
+    color: $blue-grey;
+    font-weight: 200;
+  }
+
+  p {
+    color: $blue-grey;
+  }
+}
+
+.typewriter h1 {
+  margin-bottom: 18px;
+  width: 88%;
+  height: 58px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 3px solid $secondarycolor; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */ /* Adjust as needed */
+  animation:
+    typing 3s steps(40, end),
+    blink-caret 1.2s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 88% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $secondarycolor; }
+}

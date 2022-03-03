@@ -1,36 +1,39 @@
-<h2><i class="fa-regular fa-comments"></i></i></h2>
-<% if resource.comments.count > 0 %>
-  <% resource.comments.each do |comment| %>
+<h2 class="border-bottom pb-2">Comments</h2>
+<div class="existing-comments">
+  <%# <i class="fa-regular fa-comments"></i> %>
+  <% if resource.comments.count > 0 %>
+    <% resource.comments.sort_by(&:created_at).reverse.each do |comment| %>
 
-    <div class="d-flex flex-column comment-container py-3">
+      <div class="d-flex flex-column comment-container py-3">
 
-      <div class= "d-flex justify-content-between comment-details">
+        <div class= "d-flex justify-content-between align-items-center comment-details">
 
-        <div class="d-flex align-items-center">
-          <%= image_tag "default_avatar", class: "avatar-small" %>
-          <p><%= comment.user.first_name %> <%= comment.user.last_name %></p>
+          <div class="d-flex align-items-center">
+            <%= image_tag "default_avatar.png", class: "avatar-small" %>
+            <p><strong><%= comment.user.first_name %> <%= comment.user.last_name %></strong></p>
+          </div>
+
+          <p id="comment-time-ago"><em><%= time_ago_in_words(comment.created_at) %> ago</em></p>
+
         </div>
 
-        <p class="comment-time-ago"><%= time_ago_in_words(comment.created_at) %> ago</p>
+        <p class="p-3"><%= comment.content %></p>
+
+        <% if comment.user == current_user %>
+          <%= link_to comment_path(comment),
+                                            method: :delete,
+                                            class: "del",
+                                            remote: true,
+                                            data: { confirm: "Are you sure?" } do %>
+                                              <i class="fa-solid fa-trash-can"></i>
+                                            <% end %>
+        <% end %>
+
+
 
       </div>
-
-      <p class="p-3"><%= comment.content %></p>
-
-      <% if comment.user == current_user %>
-        <%= link_to comment_path(comment),
-                                          method: :delete,
-                                          class: "del",
-                                          remote: true,
-                                          data: { confirm: "Are you sure?" } do %>
-                                            <i class="fa-solid fa-trash-can"></i>
-                                          <% end %>
-      <% end %>
-
-
-
-    </div>
+    <% end %>
+  <% else %>
+    <p>No comments yet.</p>
   <% end %>
-<% else %>
-  <p>No comments yet.</p>
-<% end %>
+</div>
