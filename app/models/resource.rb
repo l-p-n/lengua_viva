@@ -14,4 +14,8 @@ class Resource < ApplicationRecord
   def liked?(user)
     likes.find { |like| like.user == user }
   end
+
+  def bookmarked?(user)
+    bookmarks.find { |bookmark| bookmark.user == user }
+  end
 end

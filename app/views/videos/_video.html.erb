@@ -1,0 +1,26 @@
+<%= link_to video do %>
+<div class="resource-card">
+  <div class="resource-header">
+    <div class="resource-title-author">
+      <div class="resource-title">
+        <h5><strong><%= video.title %></strong></h5>
+      </div>
+      <p><%= video.author %></p>
+    </div>
+    <div class="resource-format">
+      <p><i class="fa-solid fa-video"></i></p>
+    </div>
+  </div>
+  <div class="card-image">
+    <img src="https://img.youtube.com/vi/<%= video.url_id %>/hqdefault.jpg">
+    <div class="card-tags">
+      <p>Cooking</p>
+    </div>
+    <div class="card-details">
+      <div class="resource-likes">
+        <p><i class="fa-solid fa-eye"></i></i> <%= video.views.count %> <i class="fa-solid fa-thumbs-up"></i> <%= video.likes.count %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

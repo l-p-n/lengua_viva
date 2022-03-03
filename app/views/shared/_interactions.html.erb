@@ -1,9 +1,7 @@
-<% if @resource.liked?(current_user) %>
-  <%= link_to resource_likes_path(@resource), method: :post, class: "like-btn" do %>
-    <i class="fa-solid fa-heart"></i>
-  <% end %>
-<% else %>
-  <%= link_to resource_likes_path(@resource), method: :post, class: "like-btn" do %>
-    <i class="fa-regular fa-heart"></i>
-  <% end %>
-<% end %>
+<div class="d-flex flex-column align-items-end">
+<div>
+    <%= render "shared/like_button" %>
+    <%= render "shared/bookmark_button" %>
+</div>
+  <%= render "shared/view_button" %>
+</div>

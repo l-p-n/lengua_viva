@@ -1,0 +1,13 @@
+<% if @resource.bookmarked?(current_user) %>
+
+  <%= link_to bookmark_path(@bookmark), method: :delete, class: "bookmark-btn" do %>
+    <i class="fas fa-bookmark bookmark-icon"></i>
+  <% end %>
+
+<% else %>
+
+  <%= link_to resource_bookmarks_path(@resource), method: :post, class: "bookmark-btn" do %>
+    <i class="fa-regular fa-bookmark bookmark-icon"></i>
+  <% end %>
+
+<% end %>

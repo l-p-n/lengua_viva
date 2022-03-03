@@ -7,4 +7,11 @@ class LikesController < ApplicationController
     @like.save
     redirect_to @like.resource
   end
+
+  def destroy
+    @like = Like.find(params[:id])
+    @resource = @like.resource
+    @like.destroy
+    redirect_to @resource
+  end
 end
