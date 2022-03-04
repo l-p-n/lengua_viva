@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     current_user.update(user_params)
     if save
       redirect_to my_account_path(current_user)
+    end
   end
 
   private
