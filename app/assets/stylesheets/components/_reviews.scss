@@ -1,4 +1,4 @@
-.review-container {
+.new-review-container {
   width: 420px;
   margin-left: 32px;
   position: relative;
@@ -23,4 +23,15 @@
     position: absolute;
     right: 0px;
   }
+}
+
+.star-icon {
+  font-size: 26px !important;
+  color: yellow !important;
+}
+
+.posted-review-container {
+  width: 420px;
+  margin-left: 32px;
+  // border: 1px solid $grey;
 }
