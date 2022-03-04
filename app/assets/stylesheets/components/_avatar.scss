@@ -1,5 +1,7 @@
 .avatar {
   width: 46px;
+  height: 46px;
+  object-fit: cover;
   // border: 1px solid $blue-grey;
   border-radius: 50%;
 }
@@ -13,6 +15,7 @@
 }
 
 .avatar-small {
+  object-fit: cover;
   width: 38px;
   height: 38px;
   border-radius: 50%;
