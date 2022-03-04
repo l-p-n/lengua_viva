@@ -1,7 +1,17 @@
-<div class="d-flex flex-column align-items-end">
-<div>
-    <%= render "shared/like_button" %>
-    <%= render "shared/bookmark_button" %>
-</div>
-  <%= render "shared/view_button" %>
+<div class="interactions-container">
+  <div class="d-flex justify-content-end align-items-end">
+    <div class="d-flex">
+      <% unless @resource.likes.count == 0 %>
+      <p class ="like-count" style="margin-bottom:0px;"><%= @resource.likes.count %></p>
+      <% end %>
+      <%= render "shared/like_button" %>
+    </div>
+    <div>
+      <%= render "shared/bookmark_button" %>
+    </div>
+  </div>
+
+  <div class="add-view mt-3">
+    <%= render "shared/view_button" %>
+  </div>
 </div>

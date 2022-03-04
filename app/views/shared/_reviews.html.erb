@@ -1,31 +1,58 @@
-<% if resource.reviews.count > 0 %>
-  <% resource.reviews.each do |review| %>
+<% if @resource.reviews.count > 0 %>
+  <% @resource.reviews.each do |review| %>
     <div class="posted-review-container">
-      <p>My notes</p>
-      <p><%= review.rating %></p>
-      <i class="fas fa-star"></i>
-      <p><%= review.content %></p>
-    </div>
+      <div class="review-heading">
+        <h5>My note</h5>
+        <% if review.user == current_user %>
+          <%= link_to review_path(review),
+                                            method: :delete,
+                                            class: "del",
+                                            remote: true,
+                                            data: { confirm: "Are you sure?" } do %>
+                                              <i class="fa-solid fa-trash-can"></i>
+                                            <% end %>
+        <% end %>
+      </div>
+      <div class="review-content">
+          <% if review.rating == 1 %>
+            <i class="fas fa-star"></i>
+
+          <% elsif review.rating == 2 %>
+            <% 2.times do  %>
+            <i class="fas fa-star"></i>
+            <% end %>
+
+          <% elsif review.rating == 3 %>
+            <% 3.times do  %>
+            <i class="fas fa-star"></i>
+            <% end %>
+
+          <% elsif review.rating == 4 %>
+            <% 4.times do  %>
+            <i class="fas fa-star"></i>
+            <% end %>
+
+          <% elsif review.rating == 5 %>
+            <% 5.times do  %>
+            <i class="fas fa-star"></i>
+            <% end %>
+          <% end %>
+
+        <p class="mt-2"><%= review.content %></p>
+      </div>
     <div>
-      <% if review.user == current_user %>
-        <%= link_to review_path(review),
-                                          method: :delete,
-                                          class: "del",
-                                          remote: true,
-                                          data: { confirm: "Are you sure?" } do %>
-                                            <i class="fa-solid fa-trash-can"></i>
-                                          <% end %>
-      <% end %>
+
+      </div>
     </div>
   <% end %>
 <% else %>
   <div class="new-review-container">
-    <p>My notes</p>
+    <h5>My note</h5>
     <%= simple_form_for @review, url: resource_reviews_path(resource), class: "inline" do |f| %>
       <%= f.input :rating, label: false, :collection => [1, 2, 3, 4, 5], prompt: "#{current_user.first_name}, del 1 al 5, ¿qué te pareció?" %>
       <%= f.input :content, label: false, required: false, class: "review-text-input", placeholder: "¿Por qué no dejar una nota?" %>
       <%= button_tag :submit, class: "btn btn-info review-button" do %>
-        <i class="fa-solid fa-paper-plane"></i>
+        <i class="fa-solid fa-plus"></i>
       <% end %>
    <% end %>
   </div>

@@ -1,4 +1,4 @@
-.bookmark-icon, .like-icon {
+.bookmark-icon, .like-icon, .like-count {
   color: $secondarycolor !important;
   text-decoration: none;
   font-size: 28px !important;
@@ -8,11 +8,12 @@
 }
 
 .like-icon {
-  margin: 0 0 16px 12px;
+  margin-left: 10px;
 }
 
 .bookmark-icon {
-  margin: 0 0 8px 12px !important;
+  margin-bottom: 6px;
+  margin-left: 15px;
 }
 
 .view-btn {

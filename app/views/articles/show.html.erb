@@ -10,7 +10,13 @@
         <h4>by <%= @resource.author %></h3>
         <br>
         <%= link_to "Read article", @resource.url %>
-        <%= render "shared/interactions" %>
+        <br>
+        <br>
+        <br>
+        <div class="d-flex justify-content-between">
+          <%= render "shared/reviews", resource: @resource %>
+          <%= render "shared/interactions" %>
+        </div>
       </div>
 
       <div class="comments-container ml-4">
@@ -19,7 +25,4 @@
       </div>
     </div>
   </div>
-<br>
-  <%# <%= link_to "Add a review", resource_reviews_path(@resource) %>
-
 </div>

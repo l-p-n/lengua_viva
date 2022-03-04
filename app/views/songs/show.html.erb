@@ -8,7 +8,10 @@
 
       <iframe src="<%=@resource.url%>" width="680" height="450" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-      <%= render "shared/interactions" %>
+      <div class="d-flex justify-content-between">
+        <%= render "shared/reviews", resource: @resource %>
+        <%= render "shared/interactions" %>
+      </div>
     </div>
 
     <div class="comments-container ml-4">
