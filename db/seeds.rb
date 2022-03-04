@@ -211,12 +211,5 @@ Podcast.all.each do |podcast|
 end
 
 Article.all.each do |article|
-  if article.source == "El Mundo"
-    article.update(thumbnail_url: "El Mundo.png")
-  elsif article.source == "BBC"
-    article.update(thumbnail_url: "bbc.png")
-  elsif article.source == "El País"
-    article.update(thumbnail_url: "El Pais.png")
-  else article.update(thumbnail_url: "articles.png")
-  end
+  article.update(thumbnail_url: "articles.png")
 end
