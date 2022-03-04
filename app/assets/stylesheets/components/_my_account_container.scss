@@ -1,0 +1,30 @@
+.my-account-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 64px;
+  width: 100%;
+}
+
+.my-account-nav-container {
+  background: white;
+  margin-right: 24px;
+  height: 300px;
+}
+
+.my-account-main-container {
+  margin-left: 24px;
+  background: white;
+  padding: 24px 24px 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.my-account-grid-container {
+  margin: auto;
+  h2 {
+    text-align: left;
+    margin-bottom: 24px;
+  }
+}
