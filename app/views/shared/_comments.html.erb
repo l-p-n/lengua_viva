@@ -9,7 +9,7 @@
         <div class= "d-flex justify-content-between align-items-center comment-details">
 
           <div class="d-flex align-items-center">
-            <% if comment.user.photo.key %>
+            <% if comment.user.photo.attached? %>
               <%= cl_image_tag comment.user.photo.key, class: "avatar-small", crop: :fill %>
             <% else %>
               <%= image_tag "default_avatar.png", class: "avatar-small" %>
