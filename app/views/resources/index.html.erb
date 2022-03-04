@@ -17,26 +17,36 @@
   <h2>Spotlight</h2>
   <div class="featured-content">
     <img src="/assets/fridakahlo.png" >
-    <i id="video-spotlight-icon" class="fa-solid fa-video"></i>
+
     <div class="featured-content-info">
-      <h3><strong>Un recorrido por un lado distinto de la vida de Frida Kahlo</strong></h3>
+      <h3><strong>Un recorrido por un lado distinto de la vida de Frida Kahlo</strong></h3><a href= "/videos/3"><i id="video-spotlight-icon" class="fa-solid fa-video"></i></a>
       <h4>by National Geographic Latinoamérica</h4>
-      <p>National Geographic en conjunto con Paulina Erandi Ramírez Ochoa, investigadora y curadora del Estudio Museo Casa Diego Rivera y Frida Kahlo, hacen un recorrido dentro del Estudio Museo Casa de Diego Rivera y Frida Kahlo, un espacio de intimidad y trabajo creado por el artista Juan O’Gorman especialmente para Diego y Frida. Fascinante lugar que nos abre las puertas para conocer más sobre la intrigante vida de Frida Kahlo.</p>
+      <p>National Geographic en conjunto con Paulina Erandi Ramírez Ochoa, investigadora y curadora del Estudio Museo Casa Diego Rivera y Frida Kahlo, hacen un recorrido dentro del Estudio Museo Casa de Diego Rivera y Frida Kahlo, un espacio de intimidad y trabajo creado por el artista Juan O’Gorman especialmente para Diego y Frida.</p>
     </div>
   </div>
 
   <h2>Top rated</h2>
-  <div class="arrow-container">
-    <div class="arrow"><i class="fa-solid fa-angles-right"></i></div>
     <div class="card-container">
-      <%= render @resources %>
+        <%= render @top_resources %>
     </div>
-  </div>
+    <div class="arrow w-100 d-flex justify-content-end"><i class="fa-solid fa-angles-right"></i></div>
+
 
   <h2>Just for you</h2>
   <div class="card-container">
-    <%= render @resources %>
+    <%= render @resources_for_you %>
   </div>
+  <div class="arrow w-100 d-flex justify-content-end"><i class="fa-solid fa-angles-right"></i></div>
 
+  <h2>Discover something new</h2>
+   <div class="card-container">
+    <%= render @random_resources %>
+  </div>
+  <div class="arrow w-100 d-flex justify-content-end"><i class="fa-solid fa-angles-right"></i></div>
 
+  <h2>Listen now</h2>
+  <div class="card-container">
+    <%= render @audio_resources %>
+  </div>
+  <div class="arrow w-100 d-flex justify-content-end"><i class="fa-solid fa-angles-right"></i></div>
 </div>

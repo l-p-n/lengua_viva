@@ -6,7 +6,7 @@
 
 .resource-card {
   width: 400px;
-  height: 250px;
+  height: 270px;
   background-color: white;
   border-radius: 3px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
@@ -71,6 +71,8 @@
   border-radius: 25px;
   padding: 5px;
   font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .resource-likes {
@@ -80,6 +82,8 @@
   position: absolute;
   right: 16px;
   bottom: 16px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .resource-likes p {
