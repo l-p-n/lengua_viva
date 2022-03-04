@@ -1,8 +1,11 @@
 <% if @resource.reviews.count > 0 %>
   <% @resource.reviews.each do |review| %>
     <div class="posted-review-container">
-      <div class="review-heading">
-        <h5>My note</h5>
+      <div class="review-heading mb-3">
+        <div class="d-flex justify-content-between">
+          <h5>My note</h5>
+          <%= render "shared/interactions" %>
+        </div>
         <% if review.user == current_user %>
           <%= link_to review_path(review),
                                             method: :delete,
@@ -47,7 +50,10 @@
   <% end %>
 <% else %>
   <div class="new-review-container">
-    <h5>My note</h5>
+    <div class="d-flex justify-content-between mb-3">
+          <h5>My note</h5>
+          <%= render "shared/interactions" %>
+    </div>
     <%= simple_form_for @review, url: resource_reviews_path(resource), class: "inline" do |f| %>
       <%= f.input :rating, label: false, :collection => [1, 2, 3, 4, 5], prompt: "#{current_user.first_name}, del 1 al 5, ¿qué te pareció?" %>
       <%= f.input :content, label: false, required: false, class: "review-text-input", placeholder: "¿Por qué no dejar una nota?" %>

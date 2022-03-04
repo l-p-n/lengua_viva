@@ -4,15 +4,15 @@
   <br>
 
   <div class="d-flex justify-content-between container-lg box-shadow-basic p-5">
-    <div class="d-flex flex-column align-items-end">
-
-      <p style="font-size:13px; font-weight:400;" class= "mb-2">Note: You have to be logged into your Spotify account to listen to the full song.</p>
-
+    <div>
+      <div class="add-view mt-3">
+        <%= render "shared/view_button" %>
+      </div>
       <iframe src="<%=@resource.url%>" width="580" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between align-items-start">
         <%= render "shared/reviews", resource: @resource %>
-        <%= render "shared/interactions" %>
+        <%# <%= render "shared/interactions" %>
       </div>
     </div>
 

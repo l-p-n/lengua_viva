@@ -3,11 +3,10 @@
   <br>
 
   <div class="d-flex justify-content-between container-lg box-shadow-basic p-5">
-    <div class="d-flex flex-column align-items-end">
+    <div>
       <iframe src="<%=@resource.url%>" width="580" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
        <div class="d-flex justify-content-between">
         <%= render "shared/reviews", resource: @resource %>
-        <%= render "shared/interactions" %>
      </div>
   </div>
 
