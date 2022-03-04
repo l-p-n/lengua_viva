@@ -6,7 +6,10 @@
     <div class="d-flex flex-column align-items-end">
       <%= image_tag "articles_cropped.png", alt: "image of newspaper", id: "articles" %>
       <%= link_to "Read article", @resource.url %>
-      <%= render "shared/interactions" %>
+        <div class="d-flex justify-content-between">
+          <%= render "shared/reviews", resource: @resource %>
+          <%= render "shared/interactions" %>
+        </div>
     </div>
 
     <div class="comments-container ml-4">
@@ -14,8 +17,5 @@
       <%= render "shared/new_comment_form", resource: @resource %>
     </div>
   </div>
-
-<br>
-  <%# <%= link_to "Add a review", resource_reviews_path(@resource) %>
 
 </div>

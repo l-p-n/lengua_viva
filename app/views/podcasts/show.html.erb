@@ -1,12 +1,15 @@
 <div class="container">
   <%= render "shared/resource_title", resource: @resource %>
   <br>
-  <div class="d-flex justify-content-between container-lg box-shadow-basic p-5">
 
+  <div class="d-flex justify-content-between container-lg box-shadow-basic p-5">
     <div class="d-flex flex-column align-items-end">
       <iframe src="<%=@resource.url%>" width="580" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      <%= render "shared/interactions" %>
-    </div>
+       <div class="d-flex justify-content-between">
+        <%= render "shared/reviews", resource: @resource %>
+        <%= render "shared/interactions" %>
+     </div>
+  </div>
 
 
     <div class="comments-container ml-4">
@@ -14,6 +17,11 @@
       <%= render "shared/new_comment_form", resource: @resource %>
     </div>
   </div>
+
+  <div>
+
+  </div>
+  <br>
   <br>
   <br>
 </div>
