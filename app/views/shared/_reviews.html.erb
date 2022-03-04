@@ -1,20 +1,24 @@
 <% if @resource.reviews.count > 0 %>
   <% @resource.reviews.each do |review| %>
     <div class="posted-review-container">
-      <div class="review-heading mb-3">
-        <div class="d-flex justify-content-between">
-          <h5>My note</h5>
-          <%= render "shared/interactions" %>
-        </div>
-        <% if review.user == current_user %>
-          <%= link_to review_path(review),
+      <div class="review-heading mb-3 d-flex">
+        <div class="d-flex">
+          <h5 class="my-note">My note</h5>
+          <% if review.user == current_user %>
+            <%= link_to review_path(review),
                                             method: :delete,
                                             class: "del",
                                             remote: true,
                                             data: { confirm: "Are you sure?" } do %>
                                               <i class="fa-solid fa-trash-can"></i>
                                             <% end %>
-        <% end %>
+          <% end %>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div>
+            <%= render "shared/interactions" %>
+          </div>
+        </div>
       </div>
       <div class="review-content">
           <% if review.rating == 1 %>
