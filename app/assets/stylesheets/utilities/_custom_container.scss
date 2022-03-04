@@ -7,10 +7,9 @@
   background-color: white;
 }
 
-.container-lg-bordered {
+.container-lg {
   width: 100%;
-  max-width: 1240px;
-  margin: 48px auto;
+  margin: 0 !important;
   background-color: white;
   border-radius: 5px;
 }
@@ -24,4 +23,9 @@
   border-right: 1px solid $secondarycolor;
   background-color: white;
   padding-top: 32px;
+}
+
+.resource-container {
+  background: white;
+  width: 50%;
 }
