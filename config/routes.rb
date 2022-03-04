@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/users/:id/my_account', to: 'users#my_account', as: 'my_account'
 
   resources :users, only: :show
   resources :videos, only: :show
@@ -21,4 +22,5 @@ Rails.application.routes.draw do
   resources :bookmarks, only: :destroy
   resources :reviews, only: :destroy
   resources :comments, only: :destroy
+
 end
