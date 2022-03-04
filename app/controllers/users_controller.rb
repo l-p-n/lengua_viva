@@ -4,8 +4,10 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = current_user
     current_user.update(user_params)
-    my_account_path(current_user)
+    if save
+      redirect_to my_account_path(current_user)
   end
 
   private
