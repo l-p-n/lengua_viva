@@ -8,10 +8,11 @@
   row-gap: 48px;
   margin: 16px 0px;
   grid-auto-flow: column;
-  height: 270px;
+  height: 290px;
   overflow-x: scroll;
   overflow-y: hidden;
   scrollbar-color: $secondarycolor;
+  position: relative;
 }
 .card-container a {
   text-decoration: none;
@@ -20,20 +21,25 @@
 .arrow {
   width: 35px;
   height: 35px;
-  position: absolute;
-  right: 20px;
-  top: 120px;
-  color: rgba(20,20,20,0.2);
+  right: 2px;
+  top: 100px;
+  color: $secondarycolor;
   z-index: 999;
   font-size: 38px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.arrow-container {
-  position: relative;
-}
+// .arrow-container {
+//   position: relative;
+//   border-radius: 50%;
+//   width: 40px;
+//   height: 40px;
+//   background-color: transparent;
+//   border: 1px $secondarycolor;
+// }
 
-.arrow-container:hover {
-  .arrow {
-    color: rgba(20,20,20,0.9)
-  }
-}
+// .arrow-container:hover {
+//   .arrow {
+//     color: $secondarycolor;
+//   }
+// }

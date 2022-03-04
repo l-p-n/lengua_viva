@@ -202,7 +202,7 @@ end
 
 Article.all.each do |article|
   if article.source == "El Mundo"
-    article.update(thumbnail_url: "/assets/1280px-El_Mundo_logo.svg.png")
+    article.update(thumbnail_url: "/assets/El Mundo.png")
   elsif article.source == "BBC"
     article.update(thumbnail_url: "/assets/bbc.png")
   elsif article.source == "El País"
