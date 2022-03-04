@@ -13,7 +13,7 @@
             <%= link_to "My Feed", resources_path, class: "nav-link" %>
           </li>
           <li class="nav-item-link">
-            <%= link_to "My Collection", "#", class: "nav-link" %>
+            <%= link_to "My Account", my_account_path(current_user), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "default_avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
