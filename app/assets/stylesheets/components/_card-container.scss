@@ -16,3 +16,24 @@
 .card-container a {
   text-decoration: none;
 }
+
+.arrow {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  color: rgba(20,20,20,0.2);
+  z-index: 999;
+  font-size: 38px;
+}
+
+.arrow-container {
+  position: relative;
+}
+
+.arrow-container:hover {
+  .arrow {
+    color: rgba(20,20,20,0.9)
+  }
+}
