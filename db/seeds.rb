@@ -8,9 +8,19 @@
 
 require 'faker'
 
-10.times do
-  User.create(email: Faker::Internet.email, password: "secret", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, age: (26..55).to_a.sample)
-end
+Review.destroy_all
+Like.destroy_all
+View.destroy_all
+Comment.destroy_all
+Bookmark.destroy_all
+Resource.destroy_all
+User.destroy_all
+
+
+User.create(email: "luiza@lewagon.com", password: "secret", first_name: "Luiza", last_name: "Nascimento", age: (26..55).to_a.sample)
+User.create(email: "susannah@lewagon.com", password: "secret", first_name: "Susannah", last_name: "Taylor", age: (26..55).to_a.sample)
+User.create(email: "tim@lewagon.com", password: "secret", first_name: "Tim", last_name: "Halliday", age: (26..55).to_a.sample)
+
 
 puts "Creating videos"
 Video.create(source: "Youtube",
