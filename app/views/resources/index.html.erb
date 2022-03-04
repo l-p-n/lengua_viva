@@ -1,12 +1,42 @@
-<div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.1)), url(/assets/hero.png);">
+  <div class="container">
+    <h1><strong>Level up your language</strong></h1>
+    <p>Welcome to <strong>your</strong> personalised feed</p>
 
-  <h2>TOP RATED</h2>
+    <div class="input-group rounded w-50">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+      <span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search"></i>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="index-container">
+
+  <h2>Spotlight</h2>
+  <div class="featured-content">
+    <img src="/assets/fridakahlo.png" >
+    <i id="video-spotlight-icon" class="fa-solid fa-video"></i>
+    <div class="featured-content-info">
+      <h3><strong>Un recorrido por un lado distinto de la vida de Frida Kahlo</strong></h3>
+      <h4>by National Geographic Latinoamérica</h4>
+      <p>National Geographic en conjunto con Paulina Erandi Ramírez Ochoa, investigadora y curadora del Estudio Museo Casa Diego Rivera y Frida Kahlo, hacen un recorrido dentro del Estudio Museo Casa de Diego Rivera y Frida Kahlo, un espacio de intimidad y trabajo creado por el artista Juan O’Gorman especialmente para Diego y Frida. Fascinante lugar que nos abre las puertas para conocer más sobre la intrigante vida de Frida Kahlo.</p>
+    </div>
+  </div>
+
+  <h2>Top rated</h2>
+  <div class="arrow-container">
+    <div class="arrow"><i class="fa-solid fa-angles-right"></i></div>
+    <div class="card-container">
+      <%= render @resources %>
+    </div>
+  </div>
+
+  <h2>Just for you</h2>
   <div class="card-container">
     <%= render @resources %>
   </div>
 
-  <h2>JUST FOR YOU</h2>
-  <div class="card-container">
-    <%= render @resources %>
-  </div>
+
 </div>

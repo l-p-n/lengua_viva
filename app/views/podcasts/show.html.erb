@@ -1,4 +1,4 @@
-<div class="container-lg-bordered-no-mt">
+<div class="container-lg-bordered box-shadow-basic">
   <%= render "shared/resource_title", resource: @resource %>
   <br>
   <div class="d-flex justify-content-around w-100">
@@ -7,7 +7,13 @@
       <iframe src="<%=@resource.url%>" width="680" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       <%= render "shared/interactions" %>
     </div>
+<<<<<<< HEAD
     <div class="comments-container box-shadow-basic round-corners ml-4">
+=======
+
+
+    <div class="comments-container ml-4">
+>>>>>>> master
       <%= render "shared/comments", resource: @resource %>
       <%= render "shared/new_comment_form", resource: @resource %>
     </div>
