@@ -1,6 +1,16 @@
 class ResourcesController < ApplicationController
   def index
-    @resources = Resource.all
+    @resources = Resource.all.includes(:likes)
+    @top_resources = @resources.sort_by do |resource|
+      - resource.likes.size
+    end.first(10)
+
+    @resources_for_you = @resources.sample(20)
+
+    @audio_resources = Resource.where(type: "Song").or(Resource.where(type: "Podcast"))
+    @audio_resources.sort_by { |resource| resource.published_on }
+
+    @random_resources = @resources.sample(20)
   end
 
   def like

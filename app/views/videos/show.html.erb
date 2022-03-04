@@ -1,19 +1,13 @@
-
-<%= render 'shared/resource_title', resource: @resource %>
-
-<div class="container-lg-bordered box-shadow-basic">
-
-
+<div class="container">
+  <%= render 'shared/resource_title', resource: @resource %>
   <br>
-  <div class="d-flex justify-content-around w-100">
+  <div class="d-flex justify-content-between container-lg box-shadow-basic p-5">
     <div>
-      <iframe width="680" height="380" src="https://www.youtube.com/embed/<%= @resource.url_id %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      <div class="d-flex justify-content-between">
+      <iframe width="580" height="325" src="https://www.youtube.com/embed/<%= @resource.url_id %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <div class="d-flex justify-content-between">
         <%= render "shared/reviews", resource: @resource %>
         <%= render "shared/interactions" %>
       </div>
-
     </div>
 
     <div class="comments-container ml-4">

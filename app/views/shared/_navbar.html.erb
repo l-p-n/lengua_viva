@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-lenguaviva" id="navBar">
   <div class="container-fluid">
-    <%= link_to image_tag("LenguaVivaTransparentcropped.png", height: 42), root_path, alt: "Lengua Viva logo" %>
+    <%= link_to image_tag("LenguaViva2.png", height: 42), root_path, alt: "Lengua Viva logo" %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,10 +13,15 @@
             <%= link_to "My Feed", resources_path, class: "nav-link" %>
           </li>
           <li class="nav-item-link">
-            <%= link_to "My Collection", "#", class: "nav-link" %>
+            <%= link_to "My Account", my_account_path(current_user), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "default_avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% if current_user.photo.key %>
+              <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle nav-avatar", crop: :fill, id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+              <%= image_tag "default_avatar.png", class: "avatar dropdown-toggle nav-avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
+
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Profile", "#", class: "dropdown-item" %>
               <%= link_to "My Feed", resources_path, class: "dropdown-item" %>

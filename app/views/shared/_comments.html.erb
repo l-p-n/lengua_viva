@@ -1,4 +1,4 @@
-<h2 class="border-bottom pb-2">Comments</h2>
+<h2 class="pb-2">Comments</h2>
 <div class="existing-comments">
   <%# <i class="fa-regular fa-comments"></i> %>
   <% if resource.comments.count > 0 %>
@@ -9,7 +9,11 @@
         <div class= "d-flex justify-content-between align-items-center comment-details">
 
           <div class="d-flex align-items-center">
-            <%= image_tag "default_avatar.png", class: "avatar-small" %>
+            <% if comment.user.photo.key %>
+              <%= cl_image_tag comment.user.photo.key, class: "avatar-small", crop: :fill %>
+            <% else %>
+              <%= image_tag "default_avatar.png", class: "avatar-small" %>
+            <% end %>
             <p><strong><%= comment.user.first_name %> <%= comment.user.last_name %></strong></p>
           </div>
 

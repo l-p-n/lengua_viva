@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="mt-4">My Account</h1>
+  <p class="mb-4">See all your bookmarked videos and viewing history here</p>
+
+  <div class="d-flex">
+    <div class="w-25 box-shadow-basic round-corners my-account-nav-container">
+      <ul class="list-unstyled nav-list">
+        <li><i class="fa-solid fa-caret-right"></i>  My Profile</li>
+        <li><i class="fa-solid fa-caret-right"></i>  Messages</li>
+        <li><i class="fa-solid fa-caret-right"></i>  Notes</li>
+        <li><i class="fa-solid fa-caret-right"></i>  Bookmarks</li>
+        <li><i class="fa-solid fa-caret-right"></i>  History</li>
+      </ul>
+    </div>
+    <div class="w-75 round-corners box-shadow-basic my-account-main-container">
+      <div class="my-account-grid-container">
+        <h2>Bookmarks</h2>
+        <div class="my-account-grid margin-bottom">
+          <%= render @bookmarked %>
+        </div>
+
+        <h2 class="mt-5">History</h2>
+        <div class="my-account-grid">
+          <%= render @viewed %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
