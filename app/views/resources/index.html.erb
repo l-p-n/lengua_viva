@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(/assets/orange.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(<%= image_path("orange.png") %>)";>
   <div class="container">
     <h1 class="text-white"><strong>Level up your language</strong></h1>
     <p><strong>Welcome to your personalised feed</strong></p>
@@ -16,7 +16,7 @@
 
   <h2>Spotlight</h2>
   <div class="featured-content">
-    <img src="/assets/fridakahlo.png" >
+    <%= image_tag("fridakahlo.png") %>
 
     <div class="featured-content-info">
       <h3><strong>Un recorrido por un lado distinto de la vida de Frida Kahlo</strong></h3><a href= "/videos/3"><i id="video-spotlight-icon" class="fa-solid fa-video"></i></a>
