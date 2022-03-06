@@ -3,6 +3,7 @@
 }
 
 .new-review-container {
+  margin-top: 0;
   width: 100%;
   position: relative;
   display: flex;
@@ -31,13 +32,14 @@
     font-size: 20px;
     padding: 0;
     color: #fafafa;
+    background-color: turquoise !important;
     position: absolute;
     right: 0px;
+    border: 0 !important;
   }
 
   .review-button:hover {
-    color: $secondarycolor;
-    background-color: $primarycolor;
+    background-color: $darkerturquoise !important;
     border: none;
   }
 

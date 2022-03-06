@@ -14,11 +14,6 @@
                                             <% end %>
           <% end %>
         </div>
-        <div class="d-flex justify-content-between">
-          <div>
-            <%= render "shared/interactions" %>
-          </div>
-        </div>
       </div>
       <div class="review-content">
           <% if review.rating == 1 %>
@@ -56,7 +51,6 @@
   <div class="new-review-container">
     <div class="d-flex justify-content-between mb-3">
           <h5>My note</h5>
-          <%= render "shared/interactions" %>
     </div>
     <%= simple_form_for @review, url: resource_reviews_path(resource), class: "inline" do |f| %>
       <%= f.input :rating, label: false, :collection => [1, 2, 3, 4, 5], prompt: "#{current_user.first_name}, del 1 al 5, ¿qué te pareció?" %>

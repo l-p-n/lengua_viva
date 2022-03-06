@@ -10,8 +10,7 @@
 .container-lg {
   width: 100%;
   margin: 0 !important;
-  background-color: white;
-  border-radius: 5px;
+  background-color: rgba(255,255,255, 0.8)
 }
 
 .container-lg-bordered-no-mt {
@@ -25,7 +24,10 @@
   padding-top: 32px;
 }
 
-.resource-container {
-  background: white;
-  width: 50%;
+.resource-comments-container {
+  width: 70%;
+}
+
+.note-container {
+  width: 30%;
 }
