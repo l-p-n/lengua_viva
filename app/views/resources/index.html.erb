@@ -3,12 +3,19 @@
     <h1 class="text-white"><strong>Level up your language</strong></h1>
     <p><strong>Welcome to your personalised feed</strong></p>
 
-    <div class="input-group rounded w-50">
-      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-      <span class="input-group-text border-0" id="search-addon">
-        <i class="fas fa-search"></i>
-      </span>
+    <div class="search-field w-50">
+      <%= form_tag resources_search_results_path, class: "resource-search d-flex", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control text-input round-left-corners",
+          placeholder: "Search"
+        %>
+        <%= button_tag :submit, class: "btn search-button" do %>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        <% end %>
+      <% end %>
     </div>
+
   </div>
 </div>
 
