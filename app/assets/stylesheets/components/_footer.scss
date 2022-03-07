@@ -1,5 +1,5 @@
 .lengua-viva-footer {
-  background-color: $primarycolor;
+  background-color: rgba(255,255,255, 0.5);
 }
 
 .lv-footer-container {
@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
-  max-width: 1065px;
+  max-width: 860px;
   padding: 16px 40px;
 }
 
@@ -20,8 +20,9 @@
 .footer-content {
   width: 170px;
   a {
-    color: rgb(189, 200, 228);
+    color: rgb(80,80,80);
     text-decoration: none;
+    transition: 0.3s;
   }
 
   a:hover {
@@ -38,7 +39,7 @@
 }
 
 .footer-content h6 {
-  color: $secondarycolor;
+  color: rgb(80,80,80);
 }
 
 .fa-brands {

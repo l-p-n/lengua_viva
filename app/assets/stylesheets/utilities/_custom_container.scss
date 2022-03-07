@@ -10,22 +10,18 @@
 .container-lg {
   width: 100%;
   margin: 0 !important;
-  background-color: white;
-  border-radius: 5px;
 }
 
-.container-lg-bordered-no-mt {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1240px;
-  border-left: 1px solid $secondarycolor;
-  border-right: 1px solid $secondarycolor;
-  background-color: white;
-  padding-top: 32px;
+.container-transp {
+  background-color: rgba(255,255,255, 0.5);
+  padding: 0 60px;
 }
 
-.resource-container {
-  background: white;
-  width: 50%;
+.resource-comments-container {
+  width: 70%;
+  margin-right: 56px;
+}
+
+.sidebar {
+  width: 30%;
 }

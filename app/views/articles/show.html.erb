@@ -1,20 +1,22 @@
-<div class="container">
+<div class="container-transp">
+
   <%= render "shared/resource_title", resource: @resource %>
-  <br>
+  <%= link_to "Read article", @resource.url, class: "btn my-4 btn-info w-25 mt-0 mb-4" %><br>
 
-  <div class="d-flex justify-content-between container-lg box-shadow-basic p-5">
-    <div class="d-flex flex-column align-items-end">
-      <%= image_tag "articles_cropped.png", alt: "image of newspaper", id: "articles" %>
-      <%= link_to "Read article", @resource.url %>
-        <div class="d-flex justify-content-between">
-          <%= render "shared/reviews", resource: @resource %>
-        </div>
+  <div class="d-flex justify-content-between">
+
+    <div class="resource-comments-container">
+      <%= image_tag "articles_cropped.png", alt: "image of newspaper", id: "articles" %><br>
+      <%= render "shared/interactions" %>
+      <div class="comments-container">
+        <%= render "shared/comments", resource: @resource %>
+        <%= render "shared/new_comment_form", resource: @resource %>
+      </div>
     </div>
 
-    <div class="comments-container ml-4">
-      <%= render "shared/comments", resource: @resource %>
-      <%= render "shared/new_comment_form", resource: @resource %>
+    <div class="sidebar">
+      <%= render "shared/reviews", resource: @resource %>
     </div>
+
   </div>
-
 </div>

@@ -1,22 +1,19 @@
-<% if @resource.reviews.count > 0 %>
-  <% @resource.reviews.each do |review| %>
-    <div class="posted-review-container">
-      <div class="review-heading mb-3 d-flex">
-        <div class="d-flex">
-          <h5 class="my-note">My note</h5>
-          <% if review.user == current_user %>
-            <%= link_to review_path(review),
-                                            method: :delete,
-                                            class: "del",
-                                            remote: true,
-                                            data: { confirm: "Are you sure?" } do %>
-                                              <i class="fa-solid fa-trash-can"></i>
-                                            <% end %>
-          <% end %>
-        </div>
-        <div class="d-flex justify-content-between">
-          <div>
-            <%= render "shared/interactions" %>
+<div class="main-reviews-container">
+  <% if @resource.reviews.count > 0 %>
+    <% @resource.reviews.each do |review| %>
+      <div class="posted-review-container">
+        <div class="review-heading mb-3 d-flex">
+          <div class="d-flex">
+            <h5 class="my-note">My note</h5>
+            <% if review.user == current_user %>
+              <%= link_to review_path(review),
+                                              method: :delete,
+                                              class: "del",
+                                              remote: true,
+                                              data: { confirm: "Are you sure?" } do %>
+                                                <i class="fa-solid fa-trash-can"></i>
+                                              <% end %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -25,25 +22,25 @@
             <i class="fas fa-star"></i>
           <% end %>
 
-        <p class="mt-2"><%= review.content %></p>
-      </div>
-    <div>
+          <p class="mt-2"><%= review.content %></p>
+        </div>
+      <div>
 
+        </div>
       </div>
+    <% end %>
+  <% else %>
+    <div class="new-review-container">
+      <div class="d-flex justify-content-between mb-3">
+            <h5>My note</h5>
+      </div>
+      <%= simple_form_for @review, url: resource_reviews_path(resource), class: "inline" do |f| %>
+        <%= f.input :rating, label: false, :collection => [1, 2, 3, 4, 5], prompt: "#{current_user.first_name}, del 1 al 5, ¿qué te pareció?" %>
+        <%= f.input :content, label: false, required: false, class: "review-text-input", placeholder: "¿Por qué no dejar una nota?" %>
+        <%= button_tag :submit, class: "btn btn-info review-button" do %>
+          <i class="fa-solid fa-plus"></i>
+        <% end %>
+     <% end %>
     </div>
   <% end %>
-<% else %>
-  <div class="new-review-container">
-    <div class="d-flex justify-content-between mb-3">
-          <h5>My note</h5>
-          <%= render "shared/interactions" %>
-    </div>
-    <%= simple_form_for @review, url: resource_reviews_path(resource), class: "inline" do |f| %>
-      <%= f.input :rating, label: false, :collection => [1, 2, 3, 4, 5], prompt: "#{current_user.first_name}, del 1 al 5, ¿qué te pareció?" %>
-      <%= f.input :content, label: false, required: false, class: "review-text-input", placeholder: "¿Por qué no dejar una nota?" %>
-      <%= button_tag :submit, class: "btn btn-info review-button" do %>
-        <i class="fa-solid fa-plus"></i>
-      <% end %>
-   <% end %>
-  </div>
-<% end %>
+</div>
