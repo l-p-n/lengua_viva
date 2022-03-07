@@ -1,30 +1,65 @@
-.featured-content {
-  width: 90vw;
-  height: 270px;
+// .featured-content {
+//   width: 90vw;
+//   height: 270px;
+//   display: flex;
+//   align-items: center;
+//   margin: 16px 0px;
+// }
+.spotlight-feature {
   display: flex;
-  align-items: center;
-  margin: 16px 0px;
+  height: 400px;
+  width: 100%;
+  gap: 38px;
 }
 
-.featured-content img {
+.flip-container { // flip-card
+  background-color: transparent;
   height: 100%;
-  width: 30%;
-  object-fit: cover;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-  margin: 0px 48px 0px 0px;
+  width: 450px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  perspective: 1000px;
+}
+
+.featured-content { // flip-card-inner
   position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.featured-content img:hover {
-  transition: 0.2s ease;
-  transform: scale(1.01);
-  box-shadow: 3px 3px 5px $secondarycolor;
+.flip-container:hover .featured-content {
+  transform: rotateY(180deg);
 }
 
-.featured-content h2 {
+.featured-content-front img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.featured-content-front, .featured-content-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.featured-content-back {
+  transform: rotateY(180deg);
+  padding: 32px;
+}
+
+.featured-content-back h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin: 24px;
+}
+
+.featured-content-back a {
+  text-decoration: none;
 }
 
 .featured-content p {
@@ -36,24 +71,21 @@
   padding-bottom: 16px;
 }
 
-.featured-content .featured-content-info {
-  width: 70%;
-  height: 100%;
-  padding: 16px;
-  background: white;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-// .featured-content .featured-content-info:hover {
-//   transition: 0.2s ease;
-//   transform: scale(1.01);
-//   box-shadow: 3px 3px 5px $secondarycolor;
+// .featured-content .featured-content-info {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
 // }
 
 #video-spotlight-icon {
   position: absolute;
-  right: 90px;
+  right: 32px;
+  bottom: 32px;
   z-index: 999;
+}
+
+.spotlight-comments {
+  height: 100%;
+  margin: auto;
+  overflow: scroll;
+  text-align: left;
 }

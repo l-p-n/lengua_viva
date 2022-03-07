@@ -10,6 +10,7 @@ class ResourcesController < ApplicationController
     @audio_resources = Resource.where(type: "Song").or(Resource.where(type: "Podcast"))
     @audio_resources.sort_by { |resource| resource.published_on }
 
+    @random_resource = @resources.sample
     @random_resources = @resources.sample(20)
   end
 

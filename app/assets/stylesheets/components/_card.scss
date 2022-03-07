@@ -62,17 +62,24 @@
   display: flex;
 }
 
-.card-tags p {
-  color: white;
+.card-tags {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
   position: absolute;
   left: 16px;
   bottom: 16px;
+}
+
+.card-tags p {
+  color: white;
   border: 1px solid white;
   border-radius: 25px;
   padding: 5px;
   font-size: 12px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  background-color: $primarycolor;
 }
 
 .resource-likes {
