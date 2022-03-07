@@ -30,42 +30,7 @@
 
 <div class="container-transp">
 
-  <h2 class="index-h2">Spotlight</h2>
-  <div class="spotlight-feature">
-
-    <div class= "flip-container">
-      <div class="featured-content">
-        <div class= "featured-content-front">
-          <img src= "<%= @random_resource.thumbnail_url %>">
-        </div>
-
-        <div class="featured-content-back">
-          <%= link_to @random_resource do %>
-          <h3><strong><%= @random_resource.title %></strong></h3>
-
-
-          <h4>by <%= @random_resource.author %></h4>
-            <% case @random_resource.type %>
-              <% when "Video" %>
-                <i id="spotlight-icon" class="fa-solid fa-video"></i>
-              <% when "Podcast" %>
-                <i id="spotlight-icon" class="fa-solid fa-podcast"></i>
-              <% when "Song" %>
-                <i id="spotlight-icon" class="fa-solid fa-music"></i>
-              <% when "Article" %>
-                <i id="spotlight-icon" class="fa-brands fa-readme"></i>
-            <% end %>
-          <% end %>
-          <%# <p>National Geographic en conjunto con Paulina Erandi Ramírez Ochoa, investigadora y curadora del Estudio Museo Casa Diego Rivera y Frida Kahlo, hacen un recorrido dentro del Estudio Museo Casa de Diego Rivera y Frida Kahlo, un espacio de intimidad y trabajo creado por el artista Juan O’Gorman especialmente para Diego y Frida.</p> %>
-        </div>
-      </div>
-    </div>
-
-    <div class= "spotlight-comments">
-      <h4>See what the community is saying</h4>
-      <%= render "shared/comments", resource: Resource.last %>
-    </div>
-  </div>
+  <%= render "spotlight" %>
 
 
   <h2 class="index-h2">Top rated</h2>
