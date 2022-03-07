@@ -1,0 +1,14 @@
+#dictionary-link {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.translate-button {
+  background-color: $turquoise;
+  color: #fafafa;
+  border: none;
+  &:hover {
+    background-color: $darkerturquoise !important;
+    color: #fafafa;
+  }
+}
