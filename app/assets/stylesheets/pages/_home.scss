@@ -2,13 +2,12 @@
 
 
 .landing-bg {
-  background-color: $primarycolor;
+  background-image: url("homepage_bg.png");
   height: 100vh;
   h1 {
     color: $secondarycolor;
     font-weight: 800;
     font-size: 47px !important;
-    text-shadow: 2px 2px 8px rgba(20,20,20, 0.2);
   }
 
   .landing-text {
@@ -18,12 +17,12 @@
   }
 
   h3 {
-    color: $blue-grey;
+    color: $gray;
     font-weight: 200;
   }
 
   p {
-    color: $blue-grey;
+    color: $gray;
   }
 }
 

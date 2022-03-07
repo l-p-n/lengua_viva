@@ -1,0 +1,4 @@
+class TranslatorsController < ApplicationController
+
+
+end
