@@ -28,15 +28,19 @@ h1 {
 h2 {
   font-size: 48px !important;
   font-weight: 800 !important;
-  color: $secondarycolor;
+  color: $secondarycolor !important;
 }
 
 h3 {
   font-size: 36px !important;
 }
 
-h1, h4, h5, h3 {
-  color: $primarycolor;
+h3, h4 {
+  color: $gray;
+}
+
+h5 {
+  color: $turquoise;
 }
 
 p {

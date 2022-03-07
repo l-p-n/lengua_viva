@@ -17,21 +17,11 @@
   padding: 0 60px;
 }
 
-.container-lg-bordered-no-mt {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1240px;
-  border-left: 1px solid $secondarycolor;
-  border-right: 1px solid $secondarycolor;
-  background-color: white;
-  padding-top: 32px;
-}
-
 .resource-comments-container {
   width: 70%;
 }
 
-.note-container {
+.sidebar {
+  padding-top: 200px;
   width: 30%;
 }
