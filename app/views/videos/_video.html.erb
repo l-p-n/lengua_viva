@@ -14,7 +14,11 @@
   <div class="card-image">
     <img src="https://img.youtube.com/vi/<%= video.url_id %>/hqdefault.jpg">
     <div class="card-tags">
-      <p>Cooking</p>
+      <% video.tag_list.each do |tag| %>
+      <p>
+      <%= tag %>
+      </p>
+      <% end %>
     </div>
     <div class="card-details">
       <div class="resource-likes">

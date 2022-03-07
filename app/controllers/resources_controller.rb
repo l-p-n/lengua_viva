@@ -1,6 +1,7 @@
 class ResourcesController < ApplicationController
   def index
     @resources = Resource.all.includes(:likes)
+
     @top_resources = @resources.sort_by do |resource|
       - resource.likes.size
     end.first(10)
@@ -10,6 +11,7 @@ class ResourcesController < ApplicationController
     @audio_resources = Resource.where(type: "Song").or(Resource.where(type: "Podcast"))
     @audio_resources.sort_by { |resource| resource.published_on }
 
+    @random_resource = @resources.sample
     @random_resources = @resources.sample(20)
   end
 
@@ -21,5 +23,11 @@ class ResourcesController < ApplicationController
 
   def unlike
     @resource = Resource.find(params[:id])
+  end
+
+  def search
+    if params[:query].present?
+      @results = Resource.search_by_title_author_source_and_type(params[:query])
+    end
   end
 end
