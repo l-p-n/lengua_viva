@@ -9,6 +9,7 @@
       <%= image_tag "articles_cropped.png", alt: "image of newspaper", id: "articles" %><br>
       <%= render "shared/interactions" %>
       <div class="comments-container">
+        <h2 class="pb-2">Comments</h2>
         <%= render "shared/comments", resource: @resource %>
         <%= render "shared/new_comment_form", resource: @resource %>
       </div>
