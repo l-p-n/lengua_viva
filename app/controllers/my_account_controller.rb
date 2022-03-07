@@ -1,6 +1,6 @@
 class MyAccountController < ApplicationController
   def show
-    @user = User.find(params[:id])
+    @user = current_user
     @bookmarked = @user.bookmarks.map { |bookmark| bookmark.resource }
     @viewed = @user.views.map { |view| view.resource }
     @viewed = @viewed.reverse.uniq
