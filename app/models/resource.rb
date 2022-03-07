@@ -7,6 +7,13 @@ class Resource < ApplicationRecord
 
   validates :title, :type, :author, :url, presence: true
 
+  include PgSearch::Model
+  pg_search_scope :search_by_title_author_source_and_type,
+    against: [ :title, :author, :source, :type ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
   def to_show_path
     "#{type.downcase.pluralize}/show"
   end

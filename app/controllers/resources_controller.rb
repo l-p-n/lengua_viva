@@ -1,6 +1,7 @@
 class ResourcesController < ApplicationController
   def index
     @resources = Resource.all.includes(:likes)
+
     @top_resources = @resources.sort_by do |resource|
       - resource.likes.size
     end.first(10)
@@ -21,5 +22,11 @@ class ResourcesController < ApplicationController
 
   def unlike
     @resource = Resource.find(params[:id])
+  end
+
+  def search
+    if params[:query].present?
+      @results = Resource.search_by_title_author_source_and_type(params[:query])
+    end
   end
 end
