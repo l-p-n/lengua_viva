@@ -25,6 +25,12 @@
   display: flex;
 }
 
+#home-search {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
 .resource-search {
   flex-direction: column;
 }
@@ -33,7 +39,30 @@
   margin: 18px;
   display: flex;
   align-items: center;
-  width: 65vw;
+  width: 50vw;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+.filter-tags {
+  position: absolute;
+  transform: scale(0);
+}
+
+.filter-tags + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+  background-color: white;
+  color: $secondarycolor;
+  border: 1px solid $secondarycolor;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.filter-tags:checked + label {
+  background-color: $secondarycolor;
+  color: white;
 }
