@@ -20,3 +20,20 @@
   color: white !important;
   font-weight: bold !important;
 }
+
+.search-bar {
+  display: flex;
+}
+
+.resource-search {
+  flex-direction: column;
+}
+
+.filters {
+  margin: 18px;
+  display: flex;
+  align-items: center;
+  width: 65vw;
+  gap: 12px;
+  flex-wrap: wrap;
+}

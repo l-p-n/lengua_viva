@@ -47,7 +47,7 @@ Video.create(source: "Youtube",
   title: "Un recorrido por un lado distinto de la vida de Frida Kahlo",
   length: 327,
   published_on: Date.new(2021, 3, 8),
-  tag_list: ["Art", "Famous Faces", "Big Ideas"]
+  tag_list: ["Art", "Big Ideas", "Famous Faces"]
 )
 
 Video.create(source: "Youtube",
@@ -56,7 +56,7 @@ Video.create(source: "Youtube",
   title: "El Flamenco 💃 - Historia y Cultura de España",
   length: 447,
   published_on: Date.new(2020, 7, 12),
-  tag_list: ["Dance", "Spanish Culture", "History"]
+  tag_list: ["Spanish Culture", "History"]
 )
 
 Video.create(source: "Youtube",
@@ -65,7 +65,7 @@ Video.create(source: "Youtube",
   title: "QUÉ HACER EN MADRID EN TU PRIMERA VISITA! | Ceci de Viaje",
   length: 495,
   published_on: Date.new(2020, 1, 4),
-  tag_list: ["Tourism", "Spanish Culture", "Madrid"]
+  tag_list: ["Tourism", "Spanish Culture"]
 )
 
 puts "Creating songs"
@@ -150,7 +150,7 @@ Podcast.create(source: "Spotify",
   title: "Las claves del repentino crecimiento del Barcelona con Xavi Hernández",
   length: 1750,
   published_on: Date.new(2022, 2, 28),
-  tag_list: ["Sport", "Football"]
+  tag_list: ["Sport"]
   )
 
 Podcast.create(source: "Spotify",
@@ -159,7 +159,7 @@ Podcast.create(source: "Spotify",
   title: "Vivir o Morir con Sofía Cristo",
   length: 6000,
   published_on: Date.new(2022, 2, 25),
-  tag_list: ["Music", "Pop Culture", "Discussion"]
+  tag_list: ["Music", "Pop Culture"]
   )
 
 puts "Creating articles"
@@ -186,7 +186,7 @@ Article.create(source: "El Mundo",
   author: "El Mundo",
   title: "El oscuro futuro de Haas en la Fórmula 1: equipo estadounidense, dinero ruso y el piloto más odiado",
   published_on: Date.new(2022, 2, 28),
-  tag_list: ["Sport", "Formula 1"]
+  tag_list: ["Sport"]
   )
 
 
@@ -204,7 +204,7 @@ Article.create(source: "RT",
   author: "RT",
   title: "Escenas del periodismo mexicano: de las violencias contra los trabajadores de prensa a la hipocresía de los privilegiados",
   published_on: Date.new(2022, 2, 16),
-  tag_list: ["Politics", "Current Affairs"]
+  tag_list: ["Politics", "World News"]
   )
 
 require 'open-uri'
