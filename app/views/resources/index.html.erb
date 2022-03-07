@@ -6,6 +6,7 @@
 
     <div class="search-field w-50">
       <%= form_tag resources_search_results_path, class: "resource-search d-flex", method: :get do %>
+      <div class= "search-bar">
         <%= text_field_tag :query,
           params[:query],
           class: "form-control text-input round-left-corners",
@@ -14,6 +15,13 @@
         <%= button_tag :submit, class: "btn search-button" do %>
           <i class="fa-solid fa-magnifying-glass"></i>
         <% end %>
+      </div>
+      <div class="filters">
+        <% @tags.each do |tag|%>
+        <%= check_box_tag 'tag_list[]', tag.name, false %>
+        <%= tag %>
+        <% end %>
+      </div>
       <% end %>
     </div>
 
