@@ -13,6 +13,8 @@ class ResourcesController < ApplicationController
 
     @random_resource = @resources.sample
     @random_resources = @resources.sample(20)
+
+    @tags = ActsAsTaggableOn::Tag.all
   end
 
   def like
@@ -25,9 +27,28 @@ class ResourcesController < ApplicationController
     @resource = Resource.find(params[:id])
   end
 
-  def search
-    if params[:query].present?
+  # def search
+  #   if params[:query].present?
+  #     @results = Resource.search_by_title_author_source_and_type(params[:query])
+  #   end
+  # end
+
+  # def tagged
+  #   if params[:tag].present?
+  #     @resources = Resource.tagged_with(params[:tag])
+  #   else
+  #     @resources = Resource.all
+  #   end
+  # end
+
+  def search_tagged
+    if params[:query].present? && params[:tag].present?
+      @search_results = Resource.search_by_title_author_source_and_type(params[:query])
+      @results = @search_results.tagged_with(params[:tag])
+    elsif params[:query].present?
       @results = Resource.search_by_title_author_source_and_type(params[:query])
+    elsif params[:tag].present?
+      @results = @resources.tagged_with(params[:tag])
     end
   end
 end
