@@ -1,15 +1,18 @@
-<div class="mt-5" data-controller="translator">
+<div class="mt-5 pt-4 border-top" data-controller="translator">
+  <h5>Dictionary</h5>
   <form data-action="click->translator#search">
-    <label for="word-search">Find definitions</label>
-    <input class="form-control" id="word-search" aria-describedby="word-search-help" placeholder="Search..." data-translator-target="input">
-    <small id="word-search-help" class="form-text text-muted">Spanish -> English Translation</small><br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="d-flex flex-column align-items-end">
+      <div class="d-flex w-100">
+        <input class="form-control" id="word-search" aria-describedby="word-search-help" placeholder="Search for a word" data-translator-target="input">
+        <button type="submit" class="btn translate-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <small id="word-search-help" class="form-text text-muted">Español <i class="fa-solid fa-arrow-right-arrow-left"></i> English</small><br>
+    </div>
   </form>
 
-  <p><strong>English Translations</strong></p>
-  <ul class="translations" data-translator-target="results">
-
-  </ul>
-
+  <div class="translation-results">
+    <ol class="translations" data-translator-target="results">
+    </ol>
+  </div>
 
 </div>
