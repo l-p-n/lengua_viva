@@ -6,6 +6,7 @@ class Resource < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
 
   validates :title, :type, :author, :url, presence: true
+  acts_as_taggable_on :tags
 
   include PgSearch::Model
   pg_search_scope :search_by_title_author_source_and_type,

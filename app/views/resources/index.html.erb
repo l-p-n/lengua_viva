@@ -22,15 +22,32 @@
 <div class="index-container">
 
   <h2>Spotlight</h2>
-  <div class="featured-content">
-    <%= image_tag("fridakahlo.png") %>
+  <div class="spotlight-feature">
 
-    <div class="featured-content-info">
-      <h3><strong>Un recorrido por un lado distinto de la vida de Frida Kahlo</strong></h3><a href= "/videos/3"><i id="video-spotlight-icon" class="fa-solid fa-video"></i></a>
-      <h4>by National Geographic Latinoamérica</h4>
-      <p>National Geographic en conjunto con Paulina Erandi Ramírez Ochoa, investigadora y curadora del Estudio Museo Casa Diego Rivera y Frida Kahlo, hacen un recorrido dentro del Estudio Museo Casa de Diego Rivera y Frida Kahlo, un espacio de intimidad y trabajo creado por el artista Juan O’Gorman especialmente para Diego y Frida.</p>
+    <div class= "flip-container">
+      <div class="featured-content">
+        <div class= "featured-content-front">
+          <img src= "<%= @random_resource.thumbnail_url %>">
+        </div>
+
+        <div class="featured-content-back">
+          <%= link_to @random_resource do %>
+          <h3><strong><%= @random_resource.title %></strong></h3>
+
+          <h4>by <%= @random_resource.author %></h4>
+            <i id="video-spotlight-icon" class="fa-solid fa-video"></i>
+          <% end %>
+          <%# <p>National Geographic en conjunto con Paulina Erandi Ramírez Ochoa, investigadora y curadora del Estudio Museo Casa Diego Rivera y Frida Kahlo, hacen un recorrido dentro del Estudio Museo Casa de Diego Rivera y Frida Kahlo, un espacio de intimidad y trabajo creado por el artista Juan O’Gorman especialmente para Diego y Frida.</p> %>
+        </div>
+      </div>
+    </div>
+
+    <div class= "spotlight-comments">
+      <h4>See what the community is saying</h4>
+      <%= render "shared/comments", resource: Resource.last %>
     </div>
   </div>
+
 
   <h2>Top rated</h2>
     <div class="card-container">
