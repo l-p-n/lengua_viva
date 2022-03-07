@@ -48,7 +48,7 @@ class ResourcesController < ApplicationController
     elsif params[:query].present?
       @results = Resource.search_by_title_author_source_and_type(params[:query])
     elsif params[:tag].present?
-      @results = @resources.tagged_with(params[:tag])
+      @results = Resource.tagged_with(params[:tag])
     end
   end
 end

@@ -12,14 +12,15 @@
           class: "form-control text-input round-left-corners",
           placeholder: "Search"
         %>
-        <%= button_tag :submit, class: "btn search-button" do %>
-          <i class="fa-solid fa-magnifying-glass"></i>
-        <% end %>
+
       </div>
       <div class="filters">
         <% @tags.each do |tag|%>
-        <%= check_box_tag 'tag_list[]', tag.name, false %>
-        <%= tag %>
+        <%= check_box_tag 'tag[]', tag.name, false, class: "filter-tags", id: tag.name %>
+        <label for="<%= tag.name%>"><%= tag %></label>
+        <% end %>
+        <%= button_tag :submit, id: "home-search", class: "btn search-button" do %>
+          <i class="fa-solid fa-magnifying-glass"></i>
         <% end %>
       </div>
       <% end %>
