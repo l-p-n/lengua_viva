@@ -1,22 +1,20 @@
-<div class="container">
+<div class="container-transp">
 
   <%= render "shared/resource_title", resource: @resource %>
-  <br>
 
-  <div class="d-flex justify-content-between container-lg box-shadow-basic p-5">
-    <div>
-      <iframe src="<%=@resource.url%>" width="580" height="350" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <div class="d-flex justify-content-between">
 
-      <div class="d-flex justify-content-between align-items-start">
-        <%= render "shared/reviews", resource: @resource %>
+    <div class="resource-comments-container">
+      <iframe src="<%=@resource.url%>" width="100%" height="480" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <%= render "shared/interactions" %>
+      <div class="comments-container">
+        <%= render "shared/comments", resource: @resource %>
+        <%= render "shared/new_comment_form", resource: @resource %>
       </div>
     </div>
 
-    <div class="comments-container ml-4">
-      <%= render "shared/comments", resource: @resource %>
-      <%= render "shared/new_comment_form", resource: @resource %>
+    <div class="sidebar">
+      <%= render "shared/reviews", resource: @resource %>
     </div>
   </div>
-  <br>
-  <br>
 </div>
