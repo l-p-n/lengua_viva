@@ -26,3 +26,26 @@
     margin-bottom: 24px;
   }
 }
+
+.my-preferences-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 36px;
+  width: 80%;
+}
+
+.my-preferences-card {
+  color: $primarycolor;
+  border: 1px solid $primarycolor;
+  height: 120px;
+  width: 120px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    &:hover {
+      color: $secondarycolor;
+      border: 2px solid $secondarycolor;
+    }
+
+}

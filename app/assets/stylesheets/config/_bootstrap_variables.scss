@@ -24,4 +24,7 @@ $border-radius-sm: 2px;
 
 // Override other variables below!
 $dropdown-link-hover-color:         $primarycolor;
-$dropdown-link-hover-bg:            $blue-grey;
+$dropdown-link-hover-bg:            #f1888a60;
+
+$nav-pills-link-active-color:       $secondarycolor;
+$nav-pills-link-active-bg:          rgba(255,255,255, 0.8)
