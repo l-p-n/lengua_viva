@@ -28,14 +28,15 @@ h1 {
 h2 {
   font-size: 48px !important;
   font-weight: 800 !important;
-  color: $secondarycolor !important;
+  color: $primarycolor !important;
 }
 
 h3 {
   font-size: 36px !important;
+  color: $secondarycolor !important;
 }
 
-h3, h4 {
+h4 {
   color: $gray;
 }
 

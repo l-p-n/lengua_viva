@@ -15,7 +15,7 @@
 
 <div class="container-transp">
 
-  <h2>Spotlight</h2>
+  <h2 class="index-h2">Spotlight</h2>
   <div class="featured-content">
     <%= image_tag("fridakahlo.png") %>
 
@@ -26,26 +26,26 @@
     </div>
   </div>
 
-  <h2>Top rated</h2>
+  <h2 class="index-h2">Top rated</h2>
     <div class="card-container">
         <%= render @top_resources %>
     </div>
     <div class="arrow w-100 d-flex justify-content-end"><i class="fa-solid fa-angles-right"></i></div>
 
 
-  <h2>Just for you</h2>
+  <h2 class="index-h2">Just for you</h2>
   <div class="card-container">
     <%= render @resources_for_you %>
   </div>
   <div class="arrow w-100 d-flex justify-content-end"><i class="fa-solid fa-angles-right"></i></div>
 
-  <h2>Discover something new</h2>
+  <h2 class="index-h2">Discover something new</h2>
    <div class="card-container">
     <%= render @random_resources %>
   </div>
   <div class="arrow w-100 d-flex justify-content-end"><i class="fa-solid fa-angles-right"></i></div>
 
-  <h2>Listen now</h2>
+  <h2 class="index-h2">Listen now</h2>
   <div class="card-container">
     <%= render @audio_resources %>
   </div>
