@@ -1,0 +1,15 @@
+<div class="mt-5" data-controller="translator">
+  <form data-action="click->translator#search">
+    <label for="word-search">Find definitions</label>
+    <input class="form-control" id="word-search" aria-describedby="word-search-help" placeholder="Search..." data-translator-target="input">
+    <small id="word-search-help" class="form-text text-muted">Spanish -> English Translation</small><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <p><strong>English Translations</strong></p>
+  <ul class="translations" data-translator-target="results">
+
+  </ul>
+
+
+</div>
