@@ -45,7 +45,16 @@
 
 
           <h4>by <%= @random_resource.author %></h4>
-            <i id="video-spotlight-icon" class="fa-solid fa-video"></i>
+            <% case @random_resource.type %>
+              <% when "Video" %>
+                <i id="spotlight-icon" class="fa-solid fa-video"></i>
+              <% when "Podcast" %>
+                <i id="spotlight-icon" class="fa-solid fa-podcast"></i>
+              <% when "Song" %>
+                <i id="spotlight-icon" class="fa-solid fa-music"></i>
+              <% when "Article" %>
+                <i id="spotlight-icon" class="fa-brands fa-readme"></i>
+            <% end %>
           <% end %>
           <%# <p>National Geographic en conjunto con Paulina Erandi Ramírez Ochoa, investigadora y curadora del Estudio Museo Casa Diego Rivera y Frida Kahlo, hacen un recorrido dentro del Estudio Museo Casa de Diego Rivera y Frida Kahlo, un espacio de intimidad y trabajo creado por el artista Juan O’Gorman especialmente para Diego y Frida.</p> %>
         </div>
