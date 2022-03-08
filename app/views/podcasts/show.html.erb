@@ -17,6 +17,9 @@
     <div class="sidebar">
       <%= render "shared/reviews", resource: @resource %>
       <%= render "shared/translator" %>
+      <div class="related-container">
+        <%= render @related_resources %>
+      </div>
     </div>
   </div>
 </div>

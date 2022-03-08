@@ -6,5 +6,6 @@ class MyAccountController < ApplicationController
     @viewed = @viewed.reverse.uniq
 
     @tags = ActsAsTaggableOn::Tag.all
+    @preferences = ["Art", "Cooking", "Current affairs", "Music", "Politics", "Pop culture", "Sport", "Technology", "Theatre", "Tourism"]
   end
 end
