@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/my_account', to: 'my_account#show', as: 'my_account'
   get '/resources/search_results', to: 'resources#search_tagged'
+  patch '/my_account/preferences', to: 'users#update_preferences'
 
   resources :users, only: [:show, :edit, :update]
   resources :videos, only: :show
