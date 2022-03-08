@@ -21,6 +21,11 @@
   font-weight: bold !important;
 }
 
+.search-field {
+  display: flex;
+  align-items: left;
+}
+
 .search-bar {
   display: flex;
 }
@@ -29,6 +34,7 @@
   width: 54px;
   height: 54px;
   border-radius: 50%;
+  margin-left: auto;
 }
 
 .resource-search {
@@ -36,10 +42,10 @@
 }
 
 .filters {
-  margin: 18px;
+  margin: 18px 18px 18px 0px;
   display: flex;
   align-items: center;
-  width: 50vw;
+  width: 55vw;
   gap: 12px;
   flex-wrap: wrap;
 }

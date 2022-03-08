@@ -27,20 +27,6 @@ class ResourcesController < ApplicationController
     @resource = Resource.find(params[:id])
   end
 
-  # def search
-  #   if params[:query].present?
-  #     @results = Resource.search_by_title_author_source_and_type(params[:query])
-  #   end
-  # end
-
-  # def tagged
-  #   if params[:tag].present?
-  #     @resources = Resource.tagged_with(params[:tag])
-  #   else
-  #     @resources = Resource.all
-  #   end
-  # end
-
   def search_tagged
     if params[:query].present? && params[:tag].present?
       @search_results = Resource.search_by_title_author_source_and_type(params[:query])
