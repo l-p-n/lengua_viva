@@ -14,14 +14,9 @@ class ResourcesController < ApplicationController
 
     @random_resource = @resources.sample
 
-    @random_resources = []
-    @resources.each do |resource|
-      if resource.tags.exclude?(@user.preferences)
-        @random_resources << resource
-      end
-    end
-
     @tags = ActsAsTaggableOn::Tag.all
+
+    @random_resources = @resources.reject { |resource| @resources_for_you.include?(resource) }
   end
 
   def like
