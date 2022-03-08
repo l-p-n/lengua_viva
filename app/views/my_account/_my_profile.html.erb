@@ -43,7 +43,7 @@
             <td style="width:200px; height:38px;">Preferences</td>
             <td>
             <div class="my-preferences-content">
-              <%= form_tag my_account_path, method: :patch do %>
+              <%= form_tag my_account_path, method: :patch, remote: true do %>
                 <% @tags.each do |preference|%>
                   <%= check_box_tag 'preference[]', preference.name, false, class:( @user.preference_list.include?(preference.name) ? "filter-tags-active" : "filter-tags"), id: preference.name %>
                   <label for="<%= preference.name%>"><%= preference %></label>
