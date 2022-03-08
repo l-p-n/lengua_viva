@@ -1,18 +1,25 @@
 class ResourcesController < ApplicationController
   def index
     @resources = Resource.all.includes(:likes)
+    @user = current_user
 
     @top_resources = @resources.sort_by do |resource|
       - resource.likes.size
     end.first(10)
 
-    @resources_for_you = @resources.sample(20)
+    @resources_for_you = @resources.tagged_with(@user.preferences, wild: true, any: true)
 
     @audio_resources = Resource.where(type: "Song").or(Resource.where(type: "Podcast"))
     @audio_resources.sort_by { |resource| resource.published_on }
 
     @random_resource = @resources.sample
-    @random_resources = @resources.sample(20)
+
+    @random_resources = []
+    @resources.each do |resource|
+      if resource.tags.exclude?(@user.preferences)
+        @random_resources << resource
+      end
+    end
 
     @tags = ActsAsTaggableOn::Tag.all
   end

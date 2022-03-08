@@ -37,10 +37,8 @@
 }
 
 .my-preferences-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 36px;
-  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .my-content-preferences-card {
