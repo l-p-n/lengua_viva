@@ -1,0 +1,11 @@
+<h2>My Vocabulary</h2>
+
+<h3 class="mt-3">Add a new word</h3>
+<%= simple_form_for @word, url: words_path do |f| %>
+  <%= f.input :spanish_def %>
+  <%= f.input :english_def %>
+  <%= f.input  :extra_info %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= render "vocabulary_table" %>

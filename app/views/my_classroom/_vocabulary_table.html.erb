@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Español</th>
+      <th scope="col">English</th>
+      <th scope="col">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @wordbank.words.each do |word| %>
+      <tr>
+        <td><%= word.spanish_def %></td>
+        <td><%= word.english_def %></td>
+        <td><%= word.extra_info %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
