@@ -29,7 +29,7 @@
   <% else %>
     <div class="new-review-container">
       <div class="d-flex justify-content-between mb-3">
-            <h5>My note</h5>
+            <h5 class="pink-text">My note</h5>
       </div>
       <%= simple_form_for @review, url: resource_reviews_path(resource), class: "inline" do |f| %>
         <%= f.input :rating, label: false, :collection => [1, 2, 3, 4, 5], prompt: "#{current_user.first_name}, del 1 al 5, ¿qué te pareció?" %>
