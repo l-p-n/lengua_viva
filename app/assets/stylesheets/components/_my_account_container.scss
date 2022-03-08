@@ -7,8 +7,9 @@
 
 .my-account-nav-container {
   margin-right: 24px;
-  height: 250px;
-  background: rgba(255,255,255, 0.8)
+  height: 185px;
+  background: rgba(255,255,255, 0.8);
+  padding-left: 32px;
 }
 
 .my-account-main-container {
@@ -25,4 +26,75 @@
     text-align: left;
     margin-bottom: 24px;
   }
+}
+
+.my-profile-preferences {
+
+}
+
+.my-profile-container h2, h3, h5 {
+  margin-bottom: 32px;
+}
+
+.my-preferences-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 36px;
+  width: 80%;
+}
+
+.my-content-preferences-card {
+  color: $primarycolor;
+  border: 1px solid $primarycolor;
+  height: 120px;
+  width: 120px;
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.2s;
+    &:hover {
+      color: $secondarycolor;
+      border: 1px solid $secondarycolor;
+    }
+}
+
+.my-preferences-format {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 36px;
+  width: 80%;
+}
+
+.my-format-preferences-card {
+  color: $primarycolor;
+  font-size: 48px;
+  border: 1px solid $primarycolor;
+  height: 162px;
+  width: 162px;
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.2s;
+    &:hover {
+      color: $secondarycolor;
+      border: 1px solid $secondarycolor;
+      i {
+        color: $secondarycolor;
+      }
+    }
+}
+
+.my-format-preferences-card .format-icon {
+  color: $primarycolor;
+  font-size: 44px;
+}
+
+.profile-image {
+  margin-right: 72px;
 }
