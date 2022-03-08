@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/my_account', to: 'my_account#show', as: 'my_account'
+  get '/my_classroom', to: 'my_classroom#show', as: 'my_classroom'
   get '/resources/search_results', to: 'resources#search_tagged'
 
   resources :users, only: [:show, :edit, :update]
