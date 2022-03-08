@@ -8,6 +8,8 @@
 
 require 'faker'
 
+Word.destroy_all
+Wordbank.destroy_all
 Review.destroy_all
 Like.destroy_all
 View.destroy_all
