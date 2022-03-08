@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   def show
-    @word = Word.new
     @resource_show_page = true
     @comment = Comment.new
     @review = Review.new
