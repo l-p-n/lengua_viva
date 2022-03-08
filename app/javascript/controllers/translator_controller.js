@@ -8,7 +8,6 @@ export default class extends Controller {
     fetch(`https://www.dictionaryapi.com/api/v3/references/spanish/json/${word}?key=388f7298-4a72-455e-811c-997fb974223e`)
     .then(response => response.json())
     .then(data =>
-      // console.log(data)
       data[0]["shortdef"]
       )
     .then(definitions =>

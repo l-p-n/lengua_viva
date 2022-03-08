@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     @comment.resource = @resource
     @comment.user = current_user
     if @comment.save
-      redirect_to @comment.resource
+      redirect_to @resource
     else
       render @resource.to_show_path
     end

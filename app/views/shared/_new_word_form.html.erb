@@ -1,0 +1,10 @@
+<%= simple_form_for @word, url: words_path, remote: true do |f| %>
+  <div class="w-100 d-flex flex-column">
+    <%= f.input :spanish_def, required: false, label: "Español:" %>
+    <%= f.input :english_def, required: false, label: "English:" %>
+    <%= f.input  :extra_info, label: "Add a note?" %>
+    <%= button_tag :submit, class: "btn vocab-button align-self-end" do %>
+      <i class="fa-solid fa-plus"></i>
+    <% end %>
+  </div>
+<% end %>

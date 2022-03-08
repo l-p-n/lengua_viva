@@ -10,6 +10,12 @@ class WordsController < ApplicationController
     end
   end
 
+  def destroy
+    @word = Word.find(params[:id])
+    @word.destroy
+    redirect_to my_classroom_path, anchor: "vocab-table"
+  end
+
   private
 
   def word_params
