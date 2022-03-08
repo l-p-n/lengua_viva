@@ -7,8 +7,9 @@
 
 .my-account-nav-container {
   margin-right: 24px;
-  height: 250px;
-  background: rgba(255,255,255, 0.8)
+  height: 185px;
+  background: rgba(255,255,255, 0.8);
+  padding-left: 32px;
 }
 
 .my-account-main-container {
@@ -31,9 +32,8 @@
 
 }
 
-.my-profile-preferences h5 {
+.my-profile-container h2, h3, h5 {
   margin-bottom: 32px;
-  margin-top: 32px;
 }
 
 .my-preferences-content {
@@ -57,7 +57,7 @@
   transition: 0.2s;
     &:hover {
       color: $secondarycolor;
-      border: 2px solid $secondarycolor;
+      border: 1px solid $secondarycolor;
     }
 }
 
@@ -83,7 +83,7 @@
   transition: 0.2s;
     &:hover {
       color: $secondarycolor;
-      border: 2px solid $secondarycolor;
+      border: 1px solid $secondarycolor;
       i {
         color: $secondarycolor;
       }
@@ -93,4 +93,8 @@
 .my-format-preferences-card .format-icon {
   color: $primarycolor;
   font-size: 44px;
+}
+
+.profile-image {
+  margin-right: 72px;
 }
