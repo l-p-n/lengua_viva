@@ -3,7 +3,11 @@ class WordsController < ApplicationController
     @word = Word.new(word_params)
     @wordbank = Wordbank.find_by(user: current_user)
     @word.wordbank = @wordbank
-    @word.save
+    if @word.save
+      redirect_to my_classroom_path
+    else
+      render my_classroom_path
+    end
   end
 
   private
