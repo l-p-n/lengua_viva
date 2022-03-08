@@ -24,6 +24,11 @@
   transition: opacity 1s;
   bottom: 9px;
   left: 21px;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
 }
 
 .my-tooltip .my-tooltiptext::after {

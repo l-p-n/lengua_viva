@@ -6,7 +6,7 @@
           <div class="d-flex">
             <h5 class="pink-text my-note">My note</h5>
             <div class="my-tooltip"><h5><i class="fa-solid fa-circle-question"></i></h5></i>
-              <p class="my-tooltiptext">Write a personal note. What did you like? What should you study? You can view these in My Classroom.</p>
+              <p class="my-tooltiptext">Write a personal note. What did you like? What should you study? You can view these in <%= link_to "My Classroom", my_classroom_path(current_user) %></p>
             </div>
             <% if review.user == current_user %>
               <%= link_to review_path(review),
@@ -34,7 +34,7 @@
       <div class="d-flex mb-3">
         <h5 class="pink-text my-note">My note</h5>
         <div class="my-tooltip"><h5><i class="fa-solid fa-circle-question"></i></h5></i>
-          <p class="my-tooltiptext">Write a personal note. What did you like? What should you study? You can view these in My Classroom.</p>
+          <p class="my-tooltiptext">Write a personal note. What did you like? What should you study? You can view these in <%= link_to "My Classroom", my_classroom_path(current_user) %></p>
         </div>
       </div>
       <%= simple_form_for @review, url: resource_reviews_path(resource), class: "inline" do |f| %>
