@@ -4,7 +4,10 @@
       <div class="posted-review-container">
         <div class="review-heading mb-3 d-flex">
           <div class="d-flex">
-            <h5 class="my-note">My note</h5>
+            <h5 class="pink-text my-note">My note</h5>
+            <div class="my-tooltip"><h5><i class="fa-solid fa-circle-question"></i></h5></i>
+              <p class="my-tooltiptext">Write a personal note. What did you like? What should you study? You can view these in My Classroom.</p>
+            </div>
             <% if review.user == current_user %>
               <%= link_to review_path(review),
                                               method: :delete,
@@ -28,8 +31,11 @@
     <% end %>
   <% else %>
     <div class="new-review-container">
-      <div class="d-flex justify-content-between mb-3">
-            <h5 class="pink-text">My note</h5>
+      <div class="d-flex mb-3">
+        <h5 class="pink-text my-note">My note</h5>
+        <div class="my-tooltip"><h5><i class="fa-solid fa-circle-question"></i></h5></i>
+          <p class="my-tooltiptext">Write a personal note. What did you like? What should you study? You can view these in My Classroom.</p>
+        </div>
       </div>
       <%= simple_form_for @review, url: resource_reviews_path(resource), class: "inline" do |f| %>
         <%= f.input :rating, label: false, :collection => [1, 2, 3, 4, 5], prompt: "#{current_user.first_name}, del 1 al 5, ¿qué te pareció?" %>
