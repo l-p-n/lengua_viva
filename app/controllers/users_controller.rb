@@ -10,9 +10,13 @@ class UsersController < ApplicationController
   end
 
   def update_preferences
-    if params[:preference].present?
-      current_user.preference_list.add(params[:preference])
+    @user = current_user
+    if @user.preference_list.include?(params[:preference])
+      @user.preference_list.remove(params[:preference])
+    else
+      @user.preference_list.add(params[:preference])
     end
+    @user.save
   end
 
   private
