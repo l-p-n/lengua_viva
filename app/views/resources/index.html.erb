@@ -53,9 +53,11 @@
   </div>
   <div class="arrow w-100 d-flex justify-content-end"><i class="fa-solid fa-angles-right"></i></div>
 
-  <h2 class="index-h2">Listen now</h2>
+  <% @user.preference_list.each do |preference| %>
+  <h2 class="index-h2"><%= preference %></h2>
   <div class="card-container">
-    <%= render @audio_resources %>
+    <%= render @resources.tagged_with(preference) %>
   </div>
   <div class="arrow w-100 d-flex justify-content-end"><i class="fa-solid fa-angles-right"></i></div>
+  <% end %>
 </div>

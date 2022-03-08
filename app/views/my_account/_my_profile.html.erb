@@ -39,7 +39,20 @@
           </tr>
           <tr>
             <td style="width:200px; height:38px;">Preferences</td>
-            <td><%= current_user.preference_list%></td>
+            <td>
+            <div class="my-preferences-content">
+              <%= form_tag my_account_path, method: :patch do %>
+                <% @tags.each do |preference|%>
+                  <%= check_box_tag 'preference[]', preference.name, false, class:( @user.preference_list.include?(preference.name) ? "filter-tags-active" : "filter-tags"), id: preference.name %>
+                  <label for="<%= preference.name%>"><%= preference %></label>
+                <% end %>
+                </div>
+                <%= button_tag :submit, id: "preferences", class: "btn btn-primary" do %>
+                  <%= "Save preferences" %>
+                <% end %>
+              <% end %>
+
+            </td>
           </tr>
         </table>
       </div>
@@ -67,22 +80,6 @@
       <br>
       <br>
       <h5>Content</h5>
-
-      <div class="my-preferences-content">
-
-
-
-          <%= form_tag({controller: "users", action: "update_preferences"}, method: "patch") %>
-          <% @preferences.each do |preference| %>
-            <%= check_box_tag 'preference[]', preference, false, class: "my-format-preferences-card", id: preference %>
-            <label for="<%= preference %>"><%= preference %></label>
-            <% end %>
-            <%= button_tag :submit, class: "btn btn-primary" do %>
-              <%= "Save preferences" %>
-            <% end %>
-
-
-      </div>
 
     </div>
   </div>
