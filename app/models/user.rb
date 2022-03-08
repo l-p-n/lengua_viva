@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :views
   has_many :bookmarks, dependent: :destroy
+  has_one :wordbank, dependent: :destroy
 
   validates :first_name, :last_name, presence: true
   # validates :age, numericality: { only_integer: true }
