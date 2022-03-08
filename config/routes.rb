@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/my_account', to: 'my_account#show', as: 'my_account'
   get '/my_classroom', to: 'my_classroom#show', as: 'my_classroom'
   get '/resources/search_results', to: 'resources#search_tagged'
+  patch '/my_account/preferences', to: 'users#update_preferences'
 
   resources :users, only: [:show, :edit, :update]
   resources :videos, only: :show
