@@ -8,7 +8,9 @@
         <% if current_user.photo.attached? %>
           <%= cl_image_tag current_user.photo.key, class: "avatar-x-large", crop: :fill %>
         <% else %>
-          <%= image_tag "default_avatar.png", class: "avatar-x-large" %>
+          <div class="avatar-xl-default">
+          <%= "#{current_user.first_name.chars.first}#{current_user.last_name.chars.first}" %>
+          </div>
         <% end %>
       </div>
       <div class="profile-personal-details">
