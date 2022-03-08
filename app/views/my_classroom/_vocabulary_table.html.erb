@@ -1,0 +1,26 @@
+<table id="vocab-table" class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Español 🇪🇸</th>
+      <th scope="col">English 🇬🇧</th>
+      <th scope="col">Notes</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @wordbank.words.each do |word| %>
+      <tr>
+        <td><%= word.spanish_def %></td>
+        <td><%= word.english_def %></td>
+        <td><%= word.extra_info %></td>
+        <td><%= link_to word_path(word),
+                                        method: :delete,
+                                        class: "del",
+                                        remote: true,
+                                        data: { confirm: "Are you sure?" } do %>
+                                          <i class="fa-solid fa-trash-can"></i>
+                                        <% end %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

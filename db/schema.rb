@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_07_094848) do
+ActiveRecord::Schema.define(version: 2022_03_08_114836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -149,6 +149,23 @@ ActiveRecord::Schema.define(version: 2022_03_07_094848) do
     t.index ["user_id"], name: "index_views_on_user_id"
   end
 
+  create_table "wordbanks", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_wordbanks_on_user_id"
+  end
+
+  create_table "words", force: :cascade do |t|
+    t.string "english_def"
+    t.string "spanish_def"
+    t.text "extra_info"
+    t.bigint "wordbank_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["wordbank_id"], name: "index_words_on_wordbank_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bookmarks", "resources"
@@ -162,4 +179,6 @@ ActiveRecord::Schema.define(version: 2022_03_07_094848) do
   add_foreign_key "taggings", "tags"
   add_foreign_key "views", "resources"
   add_foreign_key "views", "users"
+  add_foreign_key "wordbanks", "users"
+  add_foreign_key "words", "wordbanks"
 end

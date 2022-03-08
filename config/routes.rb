@@ -26,4 +26,6 @@ Rails.application.routes.draw do
   resources :reviews, only: :destroy
   resources :comments, only: :destroy
 
+  resources :words, only: [:create, :update, :destroy]
+
 end

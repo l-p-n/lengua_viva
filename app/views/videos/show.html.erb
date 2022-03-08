@@ -16,7 +16,11 @@
 
     <div class="sidebar">
       <%= render "shared/reviews", resource: @resource %>
-      <%= render "shared/translator" %>
+      <%= render "shared/translator", word: @word %>
+      <div class="border-top pt-5">
+        <h5 class="add-word-header">Add a word to your vocabulary list</h5>
+        <%= render "shared/new_word_form" %>
+             
       <div class="mt-5 pt-4 border-top">
         <h5>You may also be interested in...</h5>
       </div>
