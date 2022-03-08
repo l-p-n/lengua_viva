@@ -3,6 +3,7 @@
 
 .landing-bg {
   background-image: url("homepage_bg.png");
+  background-size: cover;
   height: 100vh;
   h1 {
     color: $secondarycolor;
