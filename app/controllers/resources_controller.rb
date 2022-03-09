@@ -39,4 +39,23 @@ class ResourcesController < ApplicationController
       @results = Resource.tagged_with(params[:tag])
     end
   end
+
+  def new
+    @resource = Resource.new
+  end
+
+  def create
+    @resource = Resource.new(resource_params)
+    if @resource.save
+      redirect_to @resource
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def resource_params
+    params.require(:resource).permit(:source, :url, :author, :title, :length, :published_on, :type)
+  end
 end
