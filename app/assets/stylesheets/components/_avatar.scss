@@ -20,6 +20,20 @@
   border: 1px solid $primarycolor;
 }
 
+.avatar-xl-default {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  // border: 1px solid $secondarycolor;
+  background-color: $turquoise;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  color: white;
+  font-weight: bold;
+}
+
 .avatar-small {
   object-fit: cover;
   width: 38px;

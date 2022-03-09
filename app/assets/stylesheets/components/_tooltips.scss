@@ -47,3 +47,15 @@
   visibility: visible;
   opacity: 1;
 }
+
+#feed-tool-tip {
+  padding-top: 18px !important;
+  p {
+    font-size: 16px !important;
+    text-align: left;
+    padding: 8px;
+  }
+  #feed-tooltip-icon {
+    color: $yellow;
+  }
+}
