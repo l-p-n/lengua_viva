@@ -8,6 +8,7 @@
     <%= f.input :length %>
     <%= f.input :published_on %>
     <%= f.input :type, :collection => %w[Video Song Podcast Article] %>
+    <%= f.input :tags, :collection => %w[Politics Sport Cuisine Art History Tourism Theatre\ &\ cinema Music Pop\ Culture Technology], multiple: true%>
     <%= f.submit %>
   <% end %>
 
