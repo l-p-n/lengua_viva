@@ -26,4 +26,9 @@ class Resource < ApplicationRecord
   def bookmarked?(user)
     bookmarks.find { |bookmark| bookmark.user == user }
   end
+
+  def get_user_review(user)
+    reviews.find { |review| review.user == user }
+  end
+
 end
