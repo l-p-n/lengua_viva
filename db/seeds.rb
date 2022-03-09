@@ -17,7 +17,7 @@ Comment.destroy_all
 Bookmark.destroy_all
 Resource.destroy_all
 User.destroy_all
-
+ActsAsTaggableOn::Tag.all.destroy_all
 
 User.create(email: "luiza@lewagon.com", password: "secret", first_name: "Luiza", last_name: "Nascimento", age: (26..55).to_a.sample)
 User.create(email: "susannah@lewagon.com", password: "secret", first_name: "Susannah", last_name: "Taylor", age: (26..55).to_a.sample)
@@ -31,7 +31,7 @@ Video.create(source: "Youtube",
              title: "Cómo hacer la tortilla de patatas perfecta",
              length: 135,
              published_on: Date.new(2015, 11, 5),
-             tag_list: "Cooking"
+             tag_list: "Cuisine"
 )
 
 Video.create(source: "Youtube",
@@ -49,7 +49,7 @@ Video.create(source: "Youtube",
   title: "Un recorrido por un lado distinto de la vida de Frida Kahlo",
   length: 327,
   published_on: Date.new(2021, 3, 8),
-  tag_list: ["Art", "Big Ideas", "Famous Faces"]
+  tag_list: ["Art", "History"]
 )
 
 Video.create(source: "Youtube",
@@ -58,7 +58,7 @@ Video.create(source: "Youtube",
   title: "El Flamenco 💃 - Historia y Cultura de España",
   length: 447,
   published_on: Date.new(2020, 7, 12),
-  tag_list: ["Spanish Culture", "History"]
+  tag_list: ["History"]
 )
 
 Video.create(source: "Youtube",
@@ -67,7 +67,7 @@ Video.create(source: "Youtube",
   title: "QUÉ HACER EN MADRID EN TU PRIMERA VISITA! | Ceci de Viaje",
   length: 495,
   published_on: Date.new(2020, 1, 4),
-  tag_list: ["Tourism", "Spanish Culture"]
+  tag_list: ["Tourism"]
 )
 
 puts "Creating songs"
@@ -125,7 +125,7 @@ Podcast.create(source: "Spotify",
   title: "Inteligencia artificial y la estructura del universo",
   length: 640,
   published_on: Date.new(2022, 2, 4),
-  tag_list: ["Technology", "Big Ideas"]
+  tag_list: ["Technology"]
   )
 
 Podcast.create(source: "Spotify",
@@ -134,7 +134,7 @@ Podcast.create(source: "Spotify",
   title: "Ídolos - Janis Joplin, la bruja cósmica",
   length: 1266,
   published_on: Date.new(2021, 1, 5),
-  tag_list: ["Famous Faces", "Music"]
+  tag_list: ["Music"]
   )
 
 Podcast.create(source: "Spotify",
@@ -143,7 +143,7 @@ Podcast.create(source: "Spotify",
   title: "La Tragedia de Macbeth",
   length: 570,
   published_on: Date.new(2022, 2, 24),
-  tag_list: "Theatre"
+  tag_list: "Theatre & cinema"
   )
 
 Podcast.create(source: "Spotify",
@@ -171,7 +171,7 @@ Article.create(source: "El País",
   author: "El País",
   title: "Cultura para el desarrollo",
   published_on: Date.new(2022, 2, 21),
-  tag_list: ["Spanish Culture", "Big Ideas"]
+  tag_list: ["Politics"]
   )
 
 Article.create(source: "BBC",
@@ -179,7 +179,7 @@ Article.create(source: "BBC",
   author: "BBC",
   title: "Rusia y Ucrania: por qué la invasión ordenada por Putin es un gran desafío para China",
   published_on: Date.new(2022, 2, 28),
-  tag_list: ["World News", "Politics"]
+  tag_list: ["Politics"]
   )
 
 
@@ -197,7 +197,7 @@ Article.create(source: "CNN Español",
   author: "CNN Español",
   title: "Conoce a este robot camarero presentado en Barcelona",
   published_on: Date.new(2022, 2, 21),
-  tag_list: ["Technology", "Big Ideas"]
+  tag_list: ["Technology"]
   )
 
 
@@ -206,7 +206,7 @@ Article.create(source: "RT",
   author: "RT",
   title: "Escenas del periodismo mexicano: de las violencias contra los trabajadores de prensa a la hipocresía de los privilegiados",
   published_on: Date.new(2022, 2, 16),
-  tag_list: ["Politics", "World News"]
+  tag_list: ["Politics"]
   )
 
 require 'open-uri'
