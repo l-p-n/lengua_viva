@@ -12,8 +12,8 @@ class ResourcesController < ApplicationController
     @audio_resources = Resource.where(type: "Song").or(Resource.where(type: "Podcast"))
     @audio_resources.sort_by { |resource| resource.published_on }
 
-    @spolight_resources = [Resource.find(192), Resource.find(183), Resource.find(222)]
-    @spolight_resource = @spotlight_resources.sample
+    @spotlight_resources = [Resource.find(192), Resource.find(183), Resource.find(222)]
+    @spotlight_resource = @spotlight_resources.sample
 
     @tags = ActsAsTaggableOn::Tag.all
 
