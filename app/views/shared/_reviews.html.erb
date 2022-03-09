@@ -5,16 +5,13 @@
         <div class="review-heading mb-3 d-flex">
           <div class="d-flex">
             <h5 class="pink-text my-note">My note</h5>
-            <div class="my-tooltip"><h5><i class="fa-solid fa-circle-question"></i></h5></i>
-              <p class="my-tooltiptext">Write a personal note. What did you like? What should you study? You can view these in <%= link_to "My Classroom", my_classroom_path(current_user) %></p>
-            </div>
             <% if review.user == current_user %>
               <%= link_to review_path(review),
                                               method: :delete,
                                               class: "del",
                                               remote: true,
                                               data: { confirm: "Are you sure?" } do %>
-                                                <i class="fa-solid fa-trash-can"></i>
+                                                <i class="fa-solid fa-trash-can", style="margin-left: 26px;"></i>
                                               <% end %>
             <% end %>
           </div>

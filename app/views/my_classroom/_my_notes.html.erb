@@ -1,9 +1,7 @@
-<h2>My Notes</h2>
+<h2 style="margin-bottom: 42px;">My Notes</h2>
 <% @notes.each do |note| %>
   <div class="d-flex my-5">
-
     <%= render note.resource %>
-
     <div class="review-content mx-5">
       <% note.rating.times do  %>
         <i class="fas fa-star"></i>
