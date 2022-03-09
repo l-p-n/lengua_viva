@@ -2,17 +2,38 @@
 
 <%= render "vocabulary_table" %>
 
-<h3 class="mt-5">Add a new word</h3>
 
-<%= simple_form_for @word, url: words_path, remote: true do |f| %>
-  <div class="w-50 d-flex flex-column">
-    <%= f.input :spanish_def, required: false, label: "Español:" %>
-    <%= f.input :english_def, required: false, label: "English:" %>
-    <%= f.input  :extra_info, label: "Add a note?" %>
-    <%= button_tag :submit, class: "btn vocab-button align-self-end" do %>
-      <i class="fa-solid fa-plus"></i>
+<div class="d-flex my-5 justify-content-between">
+  <div class="add-word-form">
+    <h5>Add a new word</h5>
+
+    <%= simple_form_for @word, url: words_path, remote: true do |f| %>
+      <div class="d-flex flex-column">
+        <%= f.input :spanish_def, required: false, label: false, placeholder: "Español" %>
+        <%= f.input :english_def, required: false, label: false, placeholder: "English" %>
+        <%= f.input  :extra_info, label: "Example sentence?" %>
+        <%= button_tag :submit, class: "btn vocab-button align-self-end" do %>
+          <i class="fa-solid fa-plus"></i>
+        <% end %>
+      </div>
     <% end %>
   </div>
-<% end %>
 
-<%= render "shared/translator" %>
+  <div class="wordbank-translator" data-controller="translator">
+    <h5>Dictionary</h5>
+    <form data-action="click->translator#search">
+      <div class="d-flex flex-column align-items-end">
+        <div class="d-flex w-100">
+          <input class="form-control" id="word-search" aria-describedby="word-search-help" placeholder="Search for a word" data-translator-target="input">
+          <button type="submit" class="btn translate-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <small id="word-search-help" class="form-text text-muted">Español <i class="fa-solid fa-arrow-right-arrow-left"></i> English</small><br>
+      </div>
+  </form>
+
+    <div class="translation-results">
+      <ol class="translations" data-translator-target="results">
+      </ol>
+    </div>
+  </div>
+</div>

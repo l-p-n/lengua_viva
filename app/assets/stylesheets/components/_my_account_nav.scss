@@ -8,3 +8,15 @@
     color: $secondarycolor;
   }
 }
+
+#classroom-nav {
+  height: 100px !important;
+}
+
+#my-account-nav {
+  height: 130px;
+}
+
+#pills-vocabulary-tab, #pills-notes-tab, #pills-profile-tab, #pills-bookmarks-tab, #pills-history-tab {
+  background-color: transparent !important;
+}

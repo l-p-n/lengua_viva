@@ -1,7 +1,12 @@
 <div class="banner">
   <div class="container">
     <h1 class="text-white"><strong>Level up your language</strong></h1>
-    <h4 class="mt-3"><strong>Welcome to your personalised feed</strong></h4>
+    <div class="d-flex">
+      <h4 class="mt-3"><strong>Welcome to your personalised feed</strong></h4>
+      <div class="my-tooltip" id="feed-tool-tip"><h5><i id="feed-tooltip-icon" class="fa-solid fa-circle-question"></i></h5></i>
+        <p class="my-tooltiptext">See content that has been chosen to match your interests.<br> Let us know what you like <%= link_to "here!", my_account_path(current_user) %></p>
+      </div>
+    </div>
     <p>Browse videos, songs, podcasts and articles, selected just for you.</p>
 
     <div class="search-field w-50">

@@ -1,1 +1,14 @@
-<h1>Hello world</h1>
+<div class="container">
+  <h1>Add a resource</h1>
+  <%= simple_form_for(@resource) do |f| %>
+    <%= f.input :source %><br><br>
+    <%= f.input :url, label: "URL (Remember to use embed link for spotify)" %><br><br>
+    <%= f.input :author%><br><br>
+    <%= f.input :title %>
+    <%= f.input :length %>
+    <%= f.input :published_on %>
+    <%= f.input :type, :collection => %w[Video Song Podcast Article] %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
