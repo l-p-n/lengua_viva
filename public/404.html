@@ -5,33 +5,46 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
 
-  .landing-bg {
-  background-image: url("error_bg.png");
-  height: 100vh;
-  text-align: center;
+  .error-bg {
+    background-image: url("error_bg.png");
+    background-size: 100vw 100vh;
+    text-align: center;
+  }
+
+  .dialog {
+    margin-top: 200px;
   }
 
   .dialog h1 {
       color: lightskyblue;
+      font-family: "Open Sans";
       font-weight: 800;
       font-size: 47px;
     }
 
   .dialog p {
-    color: lightgrey;
+    color: gray;
+    font-family: "Open Sans";
+  }
+
+  a {
+    text-decoration: none;
+    font-family: "Open Sans";
   }
 
   </style>
 </head>
 
-<body class="404-bg">
+<body class="error-bg">
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
+      <img src="lengua_viva_logo_cropped_text.png" width="200px">
       <h1>The page you were looking for doesn't exist.</h1>
       <p>You may have mistyped the address or the page may have moved.</p>
     </div>
     <p>If you are the application owner check the logs for more information.</p>
+    <a href="www.lenguaviva.xyz">Return to Home</a>
   </div>
 </body>
 </html>

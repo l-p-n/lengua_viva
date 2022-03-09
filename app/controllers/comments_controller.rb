@@ -5,7 +5,16 @@ class CommentsController < ApplicationController
     @comment.resource = @resource
     @comment.user = current_user
     if @comment.save
-      redirect_to @resource
+      case @resource.type
+      when "Video"
+        redirect_to video_path(@resource, anchor: "comment-header")
+      when "Song"
+        redirect_to song_path(@resource, anchor: "comment-header")
+      when "Podcast"
+        redirect_to podcast_path(@resource, anchor: "comment-header")
+      when "Article"
+        redirect_to article_path(@resource, anchor: "comment-header")
+      end
     else
       render @resource.to_show_path
     end

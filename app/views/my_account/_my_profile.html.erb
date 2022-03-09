@@ -1,85 +1,81 @@
 <div class="my-profile-container">
   <h3>My details</h3>
 
-    <div class="my-profile-details mb-5 d-flex">
-      <div class="profile-image">
-        <% if current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, class: "avatar-x-large", crop: :fill %>
-        <% else %>
-          <div class="avatar-xl-default">
-          <%= "#{current_user.first_name.chars.first}#{current_user.last_name.chars.first}" %>
-          </div>
-        <% end %>
-      </div>
-      <div class="profile-personal-details">
-        <table>
-          <tr>
-            <td style="width:200px; height:38px;">First name</td>
-            <td style="width:600px;"><%= current_user.first_name %></td>
-          </tr>
-          <tr>
-            <td style="width:200px; height:38px;">Last name</td>
-            <td><%= current_user.last_name %></td>
-          </tr>
-          <tr>
-            <td style="width:200px; height:38px;">Age</td>
-            <td><%= current_user.age%></td>
-          </tr>
-          <tr>
-            <td style="width:200px; height:38px;">Native language</td>
-            <td><%= current_user.native_language%></td>
-          </tr>
-          <tr>
-            <td style="width:200px; height:38px;">Target language</td>
-            <td><%= current_user.target_language%></td>
-          </tr>
-          <tr>
-            <td style="width:200px; height:38px;">Bio</td>
-            <td><%= current_user.bio%></td>
-          </tr>
-          <tr>
-            <td style="width:200px; height:38px;">Preferences</td>
-            <td>
-            <div class="my-preferences-content">
-              <%= form_tag my_account_path, method: :patch, remote: true do %>
-                <% @tags.each do |preference|%>
-                  <%= check_box_tag 'preference[]', preference.name, false, class:( @user.preference_list.include?(preference.name) ? "filter-tags-active" : "filter-tags"), id: preference.name %>
-                  <label for="<%= preference.name%>"><%= preference %></label>
-                <% end %>
-                </div>
-                <%= button_tag :submit, id: "preferences", class: "btn btn-primary" do %>
-                  <%= "Save preferences" %>
-                <% end %>
-              <% end %>
-
-            </td>
-          </tr>
-        </table>
-      </div>
+  <div class="my-profile-details mb-5 d-flex">
+    <div class="profile-image">
+      <% if current_user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, class: "avatar-x-large", crop: :fill %>
+      <% else %>
+        <div class="avatar-xl-default">
+        <%= "#{current_user.first_name.chars.first}#{current_user.last_name.chars.first}" %>
+        </div>
+      <% end %>
     </div>
-
-    <div class="my-profile-preferences">
-      <h3>My preferences</h3>
-
-      <h5>Media format</h5>
-
-      <div class="my-preferences-format">
-        <div class="my-format-preferences-card">
-          <i class="fa-solid fa-video format-icon"></i>
-        </div>
-        <div class="my-format-preferences-card">
-          <i class="fa-solid fa-podcast format-icon"></i>
-        </div>
-        <div class="my-format-preferences-card">
-          <i class="fa-solid fa-music format-icon"></i>
-        </div>
-        <div class="my-format-preferences-card">
-          <i class="fa-brands fa-readme format-icon"></i>
-        </div>
-      </div>
-      <br>
-      <br>
-      <h5>Content</h5>
-
+    <div class="profile-personal-details">
+      <table>
+        <tr>
+          <td style="width:200px; height:38px;"><strong>First name</strong></td>
+          <td style="width:600px;"><%= current_user.first_name %></td>
+        </tr>
+        <tr>
+          <td style="width:200px; height:38px;"><strong>Last name</strong></td>
+          <td><%= current_user.last_name %></td>
+        </tr>
+        <tr>
+          <td style="width:200px; height:38px;"><strong>Age</strong></td>
+          <td><%= current_user.age%></td>
+        </tr>
+        <tr>
+          <td style="width:200px; height:38px;"><strong>Native language</strong></td>
+          <td><%= current_user.native_language%></td>
+        </tr>
+        <tr>
+          <td style="width:200px; height:38px;"><strong>Target language</strong></td>
+          <td><%= current_user.target_language%></td>
+        </tr>
+        <tr>
+          <td style="width:200px; height:38px;"><strong>Bio</strong></td>
+          <td><%= current_user.bio%></td>
+        </tr>
+      </table>
     </div>
   </div>
+
+  <div class="my-profile-preferences">
+    <h3>My preferences</h3>
+
+    <h5>Media format</h5>
+    <br>
+    <div class="my-preferences-format">
+      <div class="my-format-preferences-card" onclick="this.style.border='2px solid #F18889';event.preventDefault();">
+        <i class="fa-solid fa-video format-icon" onclick="this.style.color='#F18889';event.preventDefault();"></i>
+      </div>
+      <div class="my-format-preferences-card" onclick="this.style.border='2px solid #F18889';event.preventDefault();">
+        <i class="fa-solid fa-podcast format-icon" onclick="this.style.color='#F18889';event.preventDefault();"></i>
+      </div>
+      <div class="my-format-preferences-card" onclick="this.style.border='2px solid #F18889';event.preventDefault();">
+        <i class="fa-solid fa-music format-icon" onclick="this.style.color='#F18889';event.preventDefault();"></i>
+      </div>
+      <div class="my-format-preferences-card" onclick="this.style.border='2px solid #F18889';event.preventDefault();">
+        <i class="fa-brands fa-readme format-icon" onclick="this.style.color='#F18889';event.preventDefault();"></i>
+      </div>
+    </div>
+    <br>
+    <br>
+    <h5>Content</h5>
+    <br>
+    <div class="my-preferences-content">
+      <%= form_tag my_account_path, method: :patch, remote: true do %>
+        <% @tags.each do |preference|%>
+          <%= check_box_tag 'preference[]', preference.name, false, class:( @user.preference_list.include?(preference.name) ? "filter-tags-active" : "filter-tags"), id: preference.name %>
+          <label for="<%= preference.name%>"><%= preference %></label>
+        <% end %>
+        <br>
+        <br>
+        <%= button_tag :submit, id: "preferences", class: "btn" do %>
+          <%= "Save preferences" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
