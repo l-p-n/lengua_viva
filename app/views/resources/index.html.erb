@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="container">
-    <h1 class="text-white"><strong>Level up your language</strong></h1>
+    <h1><strong>Level up your language</strong></h1>
     <div class="d-flex">
       <h4 class="mt-3"><strong>Welcome to your personalised feed</strong></h4>
       <div class="my-tooltip" id="feed-tool-tip"><h5><i id="feed-tooltip-icon" class="fa-solid fa-circle-question"></i></h5></i>
@@ -11,29 +11,29 @@
 
     <div class="search-field w-50">
       <%= form_tag resources_search_results_path, class: "resource-search d-flex", method: :get do %>
-      <div class= "search-bar">
+      <div class= "search-bar w-75">
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control text-input round-corners",
+          class: "form-control text-input round-left-corners",
           placeholder: "Search"
         %>
+        <%= button_tag :submit, id: "home-search", class: "btn search-button" do %>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        <% end %>
       </div>
+      <p id="filter-text" class="mt-3">Add filters to your search:</p>
       <div class="filters">
         <% @tags.each do |tag|%>
         <%= check_box_tag 'tag[]', tag.name, false, class: "filter-tags", id: tag.name %>
         <label for="<%= tag.name%>"><%= tag %></label>
         <% end %>
-        <%= button_tag :submit, id: "home-search", class: "btn search-button" do %>
-          <i class="fa-solid fa-magnifying-glass"></i>
-        <% end %>
       </div>
       <% end %>
     </div>
-
   </div>
 </div>
 
-<div class="container-transp">
+<div id="index-container-transp" class="container-transp">
 
   <%= render "spotlight" %>
 
