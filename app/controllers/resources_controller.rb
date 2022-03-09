@@ -16,6 +16,7 @@ class ResourcesController < ApplicationController
     @video_resource = Resource.find(183)
     @song_resource = Resource.find(222)
     @spotlight_resources.push(@podcast_resource, @video_resource, @song_resource)
+    @spolight_resource = @spotlight_resources.sample
 
     @tags = ActsAsTaggableOn::Tag.all
 
