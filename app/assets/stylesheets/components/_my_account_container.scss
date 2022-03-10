@@ -68,9 +68,9 @@
 }
 
 .my-format-preferences-card {
-  color: $primarycolor;
-  font-size: 48px;
-  border: 1px solid $primarycolor;
+  color: rgb(180, 180, 180);
+  font-size: 44px;
+  border: 1px solid rgb(180, 180, 180);
   height: 162px;
   width: 162px;
   border-radius: 6px;
@@ -81,16 +81,16 @@
   text-align: center;
   transition: 0.2s;
     &:hover {
-      color: $secondarycolor;
-      border: 1px solid $secondarycolor;
+      color: $primarycolor;
+      border: 1px solid $primarycolor;
       i {
-        color: $secondarycolor;
+        color: $primarycolor;
       }
     }
 }
 
 .my-format-preferences-card .format-icon {
-  color: $primarycolor;
+  color: rgb(180, 180, 180);
   font-size: 44px;
 }
 
