@@ -129,7 +129,25 @@
   color: white;
 }
 
+.filter-tags-profile-active {
+  position: absolute;
+  transform: scale(0);
+}
+
 .filter-tags-profile-active + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  border-radius: 50rem;
+  padding: 0.4rem 0.9rem;
+  background-color: $secondarycolor;
+  color: white;
+  border: 1px solid $secondarycolor;
+  margin-right: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.filter-tags-profile-active:checked + label {
   background-color: $secondarycolor;
   color: white;
 }
