@@ -33,7 +33,12 @@
     </div>
     <div class="card-details">
       <div class="resource-likes">
-        <p><i class="fa-solid fa-eye"></i></i><strong> <%= article.views.count %>  </strong><i class="fa-solid fa-thumbs-up"></i><strong> <%= article.likes.count %> </strong></p>
+        <div class="views" style="margin-right: 18px;">
+          <p><i class="fa-solid fa-eye"></i></i><strong> <%= article.views.count %> </strong></p>
+        </div>
+        <div class="likes">
+          <p><i class="fa-solid fa-thumbs-up"></i><strong> <%= article.likes.count %></strong></p>
+        </div>
       </div>
     </div>
   </div>
