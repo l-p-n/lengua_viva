@@ -12,7 +12,18 @@
     </div>
   </div>
   <div class="card-image">
-    <%= image_tag("articles.png") %>
+    <% case article.author %>
+      <% when "El País" %>
+        <%= image_tag("El_Pais.png") %>
+      <% when "El Mundo" %>
+        <%= image_tag("El_Mundo.png")%>
+      <% when "BBC" %>
+        <%= image_tag("bbc.png") %>
+      <% when "CNN Español" %>
+        <%= image_tag("cnn.png")%>
+      <% else %>
+        <%= image_tag("articles.png") %>
+    <% end %>
     <div class="card-tags">
       <% article.tag_list.each do |tag| %>
       <p>
