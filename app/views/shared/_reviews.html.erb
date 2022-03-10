@@ -17,7 +17,7 @@
 
     <div class="review-content">
         <% @resource.get_user_review(current_user).rating.times do  %>
-          <i class="fas fa-star"></i>
+          <i class="fa fa-star fa-fw"></i>
         <% end %>
 
         <p class="mt-2"><%= @resource.get_user_review(current_user).content %></p>
@@ -31,7 +31,7 @@
         </div>
       </div>
       <%= simple_form_for @review, url: resource_reviews_path(resource), class: "inline" do |f| %>
-        <%= f.input :rating, label: false, :collection => [1, 2, 3, 4, 5], prompt: "#{current_user.first_name}, del 1 al 5, ¿qué te pareció?" %>
+        <%= f.input :rating, label: false, :collection => [1, 2, 3, 4, 5], prompt: "#{current_user.first_name}, del 1 al 5, ¿qué te pareció?", input_html: { data: { controller: "star-rating" } } %>
         <%= f.input :content, label: false, required: false, class: "review-text-input", placeholder: "¿Por qué no dejar una nota?" %>
         <%= button_tag :submit, class: "btn review-button" do %>
           <i class="fa-solid fa-plus"></i>
