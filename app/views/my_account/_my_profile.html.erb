@@ -65,17 +65,20 @@
     <h5>Content</h5>
     <br>
     <div class="my-preferences-content">
-      <%= form_tag my_account_path, method: :patch, remote: true do %>
-        <% @tags.each do |preference|%>
-          <%= check_box_tag 'preference[]', preference.name, false, class:( @user.preference_list.include?(preference.name) ? "filter-tags-active" : "filter-tags"), id: preference.name %>
-          <label for="<%= preference.name%>"><%= preference %></label>
-        <% end %>
-        <br>
-        <br>
+      <div class="filters-profile">
+        <%= form_tag my_account_path, method: :patch do %>
+          <% @tags.each do |preference|%>
+            <%= check_box_tag 'preference[]', preference.name, false, class:( @user.preference_list.include?(preference.name) ? "filter-tags-profile-active" : "filter-tags-profile"), id: preference.name %>
+            <label for="<%= preference.name%>"><%= preference %></label>
+          <% end %>
+      </div>
+      <div class= "profile-button">
         <%= button_tag :submit, id: "preferences", class: "btn" do %>
           <%= "Save preferences" %>
         <% end %>
+      </div>
       <% end %>
     </div>
   </div>
+</div>
 </div>

@@ -38,6 +38,8 @@
 .my-preferences-content {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
 }
 
 .my-content-preferences-card {
@@ -95,3 +97,53 @@
 .profile-image {
   margin-right: 72px;
 }
+
+.filters-profile {
+  margin: 0 18px 18px 0px;
+  display: flex;
+  align-items: center;
+  width: 55vw;
+  gap: 12px;
+}
+
+.filter-tags-profile {
+  position: absolute;
+  transform: scale(0);
+}
+
+.filter-tags-profile + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  border-radius: 50rem;
+  padding: 0.4rem 0.9rem;
+  background-color: white;
+  color: $secondarycolor;
+  border: 1px solid $secondarycolor;
+  margin-right: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.filter-tags-profile:checked + label {
+  background-color: $secondarycolor;
+  color: white;
+}
+
+.filter-tags-profile-active + label {
+  background-color: $secondarycolor;
+  color: white;
+}
+
+#preferences {
+  border-radius: 50rem;
+  padding: 6px 12px;
+  color: $turquoise;
+  font-size: 20px;
+  border: 1px solid $turquoise;
+  background-color: white;
+  transition: 0.2s;
+    &:hover {
+      color: white;
+      background-color: $turquoise;
+    }
+  }

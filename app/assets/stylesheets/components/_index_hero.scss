@@ -77,35 +77,3 @@
   background-color: $secondarycolor;
   color: white;
 }
-
-.filter-tags-active {
-  position: absolute;
-  transform: scale(0);
-}
-
-.filter-tags-active + label {
-  cursor: pointer;
-  display: inline-block;
-  font-size: 0.7rem;
-  border-radius: 50rem;
-  padding: 0.1rem 0.5rem;
-  background-color: $secondarycolor;
-  color: white;
-  border: 1px solid $secondarycolor;
-  margin-right: 0.6rem;
-  margin-bottom: 0.4rem;
-}
-
-#preferences {
-  border-radius: 50rem;
-  padding: 6px 12px;
-  color: $turquoise;
-  font-size: 14px;
-  border: 1px solid $turquoise;
-  background-color: white;
-  transition: 0.2s;
-    &:hover {
-      color: white;
-      background-color: $turquoise;
-    }
-}
