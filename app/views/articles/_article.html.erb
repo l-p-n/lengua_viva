@@ -12,7 +12,18 @@
     </div>
   </div>
   <div class="card-image">
-    <%= image_tag("articles.png") %>
+    <% case article.author %>
+      <% when "El País" %>
+        <%= image_tag("El_Pais.png") %>
+      <% when "El Mundo" %>
+        <%= image_tag("El_Mundo.png")%>
+      <% when "BBC" %>
+        <%= image_tag("bbc.png") %>
+      <% when "CNN Español" %>
+        <%= image_tag("cnn.png")%>
+      <% else %>
+        <%= image_tag("articles.png") %>
+    <% end %>
     <div class="card-tags">
       <% article.tag_list.each do |tag| %>
       <p>
@@ -22,7 +33,12 @@
     </div>
     <div class="card-details">
       <div class="resource-likes">
-        <p><i class="fa-solid fa-eye"></i></i><strong> <%= article.views.count %>  </strong><i class="fa-solid fa-thumbs-up"></i><strong> <%= article.likes.count %> </strong></p>
+        <div class="views" style="margin-right: 18px;">
+          <p><i class="fa-solid fa-eye"></i></i><strong> <%= article.views.count %> </strong></p>
+        </div>
+        <div class="likes">
+          <p><i class="fa-solid fa-thumbs-up"></i><strong> <%= article.likes.count %></strong></p>
+        </div>
       </div>
     </div>
   </div>

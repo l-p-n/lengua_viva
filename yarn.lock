@@ -6617,6 +6617,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeit@^8.3.3:
+  version "8.3.3"
+  resolved "https://registry.yarnpkg.com/typeit/-/typeit-8.3.3.tgz#4d500fde44fcd08c67503466d0a3fc577aae4a93"
+  integrity sha512-DOrcb4PjWzdNBjd2LZlIGRBqqFzaealJ3JPUlp6iuw3s/LgsqC7Zo68kl07l/YrmqjRVl0AiF1I7rWiDe0lNnQ==
+
 unbox-primitive@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/unbox-primitive/-/unbox-primitive-1.0.1.tgz#085e215625ec3162574dc8859abee78a59b14471"

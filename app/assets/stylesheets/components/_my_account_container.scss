@@ -68,9 +68,9 @@
 }
 
 .my-format-preferences-card {
-  color: $primarycolor;
-  font-size: 48px;
-  border: 1px solid $primarycolor;
+  color: $secondarycolor;
+  font-size: 44px;
+  border: 1px solid $secondarycolor;
   height: 162px;
   width: 162px;
   border-radius: 6px;
@@ -80,17 +80,17 @@
   align-items: center;
   text-align: center;
   transition: 0.2s;
-    &:hover {
-      color: $secondarycolor;
-      border: 1px solid $secondarycolor;
-      i {
-        color: $secondarycolor;
-      }
-    }
+    // &:hover {
+    //   color: $primarycolor;
+    //   border: 1px solid $primarycolor;
+    //   i {
+    //     color: $primarycolor;
+    //   }
+    // }
 }
 
 .my-format-preferences-card .format-icon {
-  color: $primarycolor;
+  color: $secondarycolor;
   font-size: 44px;
 }
 

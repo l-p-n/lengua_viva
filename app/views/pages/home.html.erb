@@ -2,9 +2,7 @@
   <div class="w-50 landing-bg px-4">
     <div class="container landing-text">
       <%= image_tag "lengua_viva_logo_cropped_text.png", width: 200, height: 110, class: "mb-4" %>
-      <div class="typewriter">
-        <h1>Level Up Your Language</h1>
-      </div>
+        <h1 id="typing"></h1>
         <h3>Practise foreign languages with authentic materials.</h2>
         <p class="my-2"><strong>Lengua Viva gives you personalised recommendations for songs, podcasts, articles and videos in your language of choice</strong></p>
         <%= link_to "Get Started", resources_path, class: "btn my-4 btn-success sign-up-btn" %>
@@ -15,3 +13,15 @@
   <div class="w-50 landing-bg">
     <%= render "image_carousel" %>
   </div>
+
+<script src="https://unpkg.com/typeit@8.2.0/dist/index.umd.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new TypeIt("#typing", {
+      strings: ["Level Up Your Language"],
+      startDelay: 1000,
+      cursorSpeed: 1000,
+      speed: 110,
+    }).go();
+  });
+</script>

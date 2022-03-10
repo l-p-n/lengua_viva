@@ -53,3 +53,10 @@
   from, to { border-color: transparent }
   50% { border-color: $secondarycolor; }
 }
+
+.ti-cursor {
+  font-weight: 400 !important;
+  margin-left: 6px !important;
+  font-size: 52px !important;
+  padding-top: 2px !important;
+}
