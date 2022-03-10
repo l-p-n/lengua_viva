@@ -19,7 +19,6 @@ class UsersController < ApplicationController
     @user.save
     @user.reload.preference_list
     redirect_to my_account_path(current_user)
-    raise
   end
 
   private
